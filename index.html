@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="ms" class="dark scroll-smooth">
+<html lang="ms" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esport Tour Smart Ummah Perak Tengah 2026</title>
+  <title>ESPORT TOUR SMART UMMAH DAERAH PERAK TENGAH 2026</title>
   
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS & FontAwesome -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -14,66 +16,58 @@
         extend: {
           colors: {
             brand: {
-              dark: '#080d16',
-              card: '#111827',
-              border: '#1f293d',
-              emerald: '#10b981',
-              emeraldHover: '#059669',
-              gold: '#fbbf24',
-              goldDark: '#d97706',
-              cyan: '#06b6d4'
+              50: '#f0fdf4',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            },
+            accent: {
+              500: '#8b5cf6',
+              600: '#7c3aed',
             }
-          },
-          fontFamily: {
-            heading: ['Orbitron', 'sans-serif'],
-            body: ['Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #080d16;
+      background-color: #0b0f19;
       color: #f3f4f6;
     }
+
     .font-heading {
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Teko', sans-serif;
+      letter-spacing: 0.05em;
     }
-    .glow-emerald {
-      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
-    }
-    .glow-gold {
-      box-shadow: 0 0 25px rgba(251, 191, 36, 0.25);
-    }
-    .bg-grid-pattern {
-      background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 0);
-      background-size: 24px 24px;
-    }
-    .glass-panel {
-      background: rgba(17, 24, 39, 0.75);
-      backdrop-filter: blur(12px);
+
+    .glass-card {
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
+
+    .glow-effect-green {
+      box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.35);
+    }
+    
+    .glow-effect-purple {
+      box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.35);
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #080d16;
+      background: #0b0f19;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1f293d;
+      background: #1f2937;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -81,1356 +75,1169 @@
     }
   </style>
 </head>
-<body class="bg-brand-dark text-gray-100 min-h-screen flex flex-col selection:bg-brand-emerald selection:text-black">
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-black">
 
-  <!-- HEADER / NAVBAR -->
-  <header class="sticky top-0 z-40 w-full glass-panel border-b border-gray-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Logo & Branding -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-emerald via-teal-500 to-brand-gold p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
-          <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-gamepad text-brand-emerald text-xl group-hover:text-brand-gold transition-colors"></i>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-heading font-black text-lg tracking-wider text-white leading-tight">
-            SMART<span class="text-brand-emerald">UMMAH</span>
-          </span>
-          <span class="text-[10px] tracking-widest uppercase text-brand-gold font-bold">
-            Perak Tengah 2026
-          </span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-300">
-        <a href="#info" class="hover:text-brand-emerald transition-colors">Info</a>
-        <a href="#kategori" class="hover:text-brand-emerald transition-colors">Kategori & Yuran</a>
-        <a href="#format" class="hover:text-brand-emerald transition-colors">Format & Peraturan</a>
-        <a href="#cara-daftar" class="hover:text-brand-emerald transition-colors">Cara Daftar</a>
-        <a href="#faq" class="hover:text-brand-emerald transition-colors">FAQ</a>
-        <a href="#hubungi" class="hover:text-brand-emerald transition-colors">Hubungi</a>
-      </nav>
-
-      <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
-        <button onclick="toggleAdminModal()" class="px-3 py-1.5 text-xs font-bold rounded-lg border border-brand-emerald/40 text-brand-emerald hover:bg-brand-emerald/10 transition flex items-center gap-2">
-          <i class="fa-solid fa-user-shield"></i>
-          <span class="hidden sm:inline">Admin</span>
-        </button>
-        <a href="#pendaftaran" class="px-4 py-2 text-xs sm:text-sm font-bold rounded-lg bg-gradient-to-r from-brand-emerald to-teal-500 text-black shadow-lg hover:brightness-110 active:scale-95 transition-all flex items-center gap-2">
-          <i class="fa-solid fa-bolt"></i>
-          <span>DAFTAR</span>
-        </a>
-        <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-white p-2">
-          <i class="fa-solid fa-bars text-xl"></i>
+  <!-- TOP NOTICE BAR / SCRIPT URL SETTING -->
+  <div class="bg-gray-900 border-b border-gray-800 py-2.5 px-4 text-xs text-gray-400 sticky top-0 z-40 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+        <span class="font-semibold text-gray-200">Pendaftaran Rasmi Kini Terbuka</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span id="scriptUrlStatus" class="text-amber-400 flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-triangle-exclamation"></i> URL Web App Belum Diset
+        </span>
+        <button onclick="openConfigModal()" class="text-emerald-400 hover:text-emerald-300 underline font-bold flex items-center gap-1.5 transition-colors">
+          <i class="fa-solid fa-gear"></i> Tetapan API
         </button>
       </div>
     </div>
+  </div>
 
-    <!-- Mobile Navigation Dropdown -->
-    <div id="mobileMenu" class="hidden md:hidden bg-brand-card/95 border-b border-gray-800 px-4 pt-2 pb-6 space-y-3 font-medium">
-      <a href="#info" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-emerald border-b border-gray-800">Info Pertandingan</a>
-      <a href="#kategori" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-emerald border-b border-gray-800">Kategori & Yuran</a>
-      <a href="#format" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-emerald border-b border-gray-800">Format & Peraturan</a>
-      <a href="#cara-daftar" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-emerald border-b border-gray-800">Cara Pendaftaran</a>
-      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-emerald border-b border-gray-800">Soalan Lazim (FAQ)</a>
-      <a href="#hubungi" onclick="toggleMobileMenu()" class="block py-2 text-gray-300 hover:text-brand-emerald">Hubungi Admin</a>
+  <!-- HEADER / HERO SECTION -->
+  <header class="relative overflow-hidden pt-8 pb-12 border-b border-gray-800">
+    <div class="absolute inset-0 bg-gradient-to-r from-emerald-900/20 via-purple-900/20 to-gray-900/40 z-0"></div>
+    <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-4">
+        <i class="fa-solid fa-trophy text-amber-400"></i> Kejohanan e-Sukan Perak Tengah 2026
+      </div>
+
+      <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-bold uppercase tracking-wider text-white leading-none mb-3">
+        ESPORT TOUR SMART UMMAH <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
+          DAERAH PERAK TENGAH 2026
+        </span>
+      </h1>
+
+      <!-- TAGLINE RASMI POSTER -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-extrabold text-xs tracking-widest uppercase mb-4">
+        <span>GAMING</span> <span class="text-emerald-400">•</span> <span>UNITY</span> <span class="text-emerald-400">•</span> <span>POSITIVE YOUTH</span>
+      </div>
+
+      <!-- LOCATION & DATE BADGES -->
+      <div class="flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-gray-200 mt-2 mb-8">
+        <a href="https://maps.google.com/?cid=6835113764742097413" target="_blank" title="Buka Google Maps"
+           class="flex items-center gap-2 bg-gray-800/90 hover:bg-gray-700/90 px-4 py-2.5 rounded-xl border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 shadow-md transition-all group">
+          <i class="fa-solid fa-location-dot text-red-400 text-base group-hover:scale-110 transition-transform"></i>
+          <span><strong>Lokasi:</strong> Masjid Sultan Yussuf Izzuddin Shah, Seri Iskandar, Perak</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-70 ml-1"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-5xl mx-auto text-left">
+        
+        <!-- POSTER DISPLAY CARD -->
+        <div class="lg:col-span-5 glass-card p-3 rounded-2xl border border-emerald-500/30 shadow-2xl relative group overflow-hidden">
+          <div class="relative rounded-xl overflow-hidden bg-gray-950 border border-gray-800">
+            <!-- POSTER IMAGE / DESIGN -->
+            <div id="posterContainer" class="relative cursor-pointer" onclick="openPosterModal()">
+              
+              <!-- Graphical Esports Poster Banner -->
+              <div class="bg-gradient-to-br from-gray-900 via-emerald-950 to-purple-950 p-5 aspect-[3/4.2] flex flex-col justify-between relative overflow-hidden border border-gray-800">
+                
+                <!-- Graphic Elements -->
+                <div class="absolute -top-12 -right-12 w-40 h-40 bg-emerald-500/20 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-purple-500/20 rounded-full blur-2xl"></div>
+
+                <!-- Top Header -->
+                <div class="text-center space-y-1 relative z-10">
+                  <div class="text-[9px] font-extrabold tracking-widest text-emerald-400 uppercase bg-emerald-950/80 px-2.5 py-0.5 rounded-full border border-emerald-500/30 inline-block">
+                    KEJOHANAN RASMI 2026
+                  </div>
+                  <h3 class="font-heading text-3xl font-extrabold text-white leading-none tracking-wide mt-1">
+                    ESPORT TOUR <br>
+                    <span class="text-emerald-400">SMART UMMAH</span>
+                  </h3>
+                  <p class="text-[9px] text-amber-300 font-bold uppercase tracking-widest">GAMING • UNITY • POSITIVE YOUTH</p>
+                </div>
+
+                <!-- Prize Pool Preview Box inside Poster -->
+                <div class="my-auto grid grid-cols-2 gap-2 text-center relative z-10">
+                  <div class="bg-emerald-950/80 p-2 rounded-xl border border-emerald-500/40">
+                    <div class="text-[10px] font-bold text-emerald-400 flex items-center justify-center gap-1">
+                      <i class="fa-solid fa-gamepad"></i> eFootball
+                    </div>
+                    <div class="text-xs font-black text-amber-300 mt-1">JOHAN RM250</div>
+                    <div class="text-[9px] text-gray-300">N.Johan: RM150</div>
+                    <div class="text-[9px] text-gray-400">Ke-3: RM100</div>
+                  </div>
+
+                  <div class="bg-purple-950/80 p-2 rounded-xl border border-purple-500/40">
+                    <div class="text-[10px] font-bold text-purple-400 flex items-center justify-center gap-1">
+                      <i class="fa-solid fa-shield-halved"></i> MLBB (5v5)
+                    </div>
+                    <div class="text-xs font-black text-amber-300 mt-1">JOHAN RM450</div>
+                    <div class="text-[9px] text-gray-300">N.Johan: RM350</div>
+                    <div class="text-[9px] text-gray-400">Ke-3: RM200</div>
+                  </div>
+                </div>
+
+                <!-- Footer Poster Details -->
+                <div class="bg-gray-900/90 backdrop-blur-sm p-2.5 rounded-xl border border-gray-800 space-y-1 relative z-10 text-[10px]">
+                  <div class="flex items-center justify-between text-gray-300">
+                    <span class="flex items-center gap-1 text-emerald-400 font-bold">
+                      <i class="fa-regular fa-calendar"></i> SABTU, 10 OKTOBER 2026
+                    </span>
+                    <span class="text-amber-400 font-bold bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
+                      SLOT TERHAD!
+                    </span>
+                  </div>
+                  <div class="flex items-start gap-1 text-gray-300">
+                    <i class="fa-solid fa-location-dot text-red-400 mt-0.5"></i>
+                    <span class="leading-tight">Masjid Sultan Yussuf Izzuddin Shah, Seri Iskandar</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Overlay Hover Button -->
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white font-bold text-xs">
+                <i class="fa-solid fa-magnifying-glass-plus text-lg"></i> Klik Papar Poster Penuh
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-2 text-center">
+            <button onclick="openPosterModal()" class="text-xs text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1">
+              <i class="fa-solid fa-expand"></i> Lihat Detail Poster & Hadiah
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT STATS & SLOTS SUMMARY -->
+        <div class="lg:col-span-7 space-y-4">
+          <!-- PRIZE POOL BREAKDOWN CARDS -->
+          <div class="glass-card p-4 rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/20 via-gray-900 to-emerald-950/20 shadow-xl">
+            <div class="flex items-center justify-between mb-3 border-b border-gray-800 pb-2">
+              <h2 class="text-base font-bold text-amber-400 flex items-center gap-2">
+                <i class="fa-solid fa-trophy text-amber-400"></i> Hadiah Kejohanan
+              </h2>
+              <span class="text-[10px] font-black uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">
+                Pemenang Tunai
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <!-- eFootball Prizes -->
+              <div class="bg-gray-900/90 p-3 rounded-xl border border-emerald-500/30 space-y-1.5">
+                <div class="text-xs font-bold text-emerald-400 flex items-center gap-1.5 border-b border-gray-800 pb-1">
+                  <i class="fa-solid fa-gamepad"></i> eFootball (Solo)
+                </div>
+                <div class="space-y-1 text-xs">
+                  <div class="flex justify-between items-center text-amber-300 font-bold">
+                    <span>🥇 Johan:</span>
+                    <span class="text-sm">RM 250</span>
+                  </div>
+                  <div class="flex justify-between items-center text-gray-200">
+                    <span>🥈 Naib Johan:</span>
+                    <span class="font-semibold">RM 150</span>
+                  </div>
+                  <div class="flex justify-between items-center text-gray-400">
+                    <span>🥉 Ketiga:</span>
+                    <span class="font-semibold">RM 100</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MLBB Prizes -->
+              <div class="bg-gray-900/90 p-3 rounded-xl border border-purple-500/30 space-y-1.5">
+                <div class="text-xs font-bold text-purple-400 flex items-center gap-1.5 border-b border-gray-800 pb-1">
+                  <i class="fa-solid fa-shield-halved"></i> MLBB (Pasukan 5v5)
+                </div>
+                <div class="space-y-1 text-xs">
+                  <div class="flex justify-between items-center text-amber-300 font-bold">
+                    <span>🥇 Johan:</span>
+                    <span class="text-sm">RM 450</span>
+                  </div>
+                  <div class="flex justify-between items-center text-gray-200">
+                    <span>🥈 Naib Johan:</span>
+                    <span class="font-semibold">RM 350</span>
+                  </div>
+                  <div class="flex justify-between items-center text-gray-400">
+                    <span>🥉 Ketiga:</span>
+                    <span class="font-semibold">RM 200</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COUNTER CARDS -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- eFootball Slot Status -->
+            <div class="glass-card p-4 rounded-xl border-l-4 border-emerald-500 text-left flex justify-between items-center">
+              <div>
+                <div class="text-xs text-gray-400 font-semibold uppercase">eFootball (Solo)</div>
+                <div class="text-2xl font-bold text-white flex items-center gap-2 mt-1">
+                  <span id="efootballCount">--</span> / 32 <span class="text-xs font-normal text-gray-400">Pemain</span>
+                </div>
+                <div class="text-xs text-emerald-400 mt-1 font-semibold">Yuran: RM 5.00</div>
+              </div>
+              <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl font-bold">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+            </div>
+
+            <!-- MLBB Slot Status -->
+            <div class="glass-card p-4 rounded-xl border-l-4 border-purple-500 text-left flex justify-between items-center">
+              <div>
+                <div class="text-xs text-gray-400 font-semibold uppercase">Mobile Legends (Squad)</div>
+                <div class="text-2xl font-bold text-white flex items-center gap-2 mt-1">
+                  <span id="mlbbCount">--</span> / 32 <span class="text-xs font-normal text-gray-400">Pasukan</span>
+                </div>
+                <div class="text-xs text-purple-400 mt-1 font-semibold">Yuran: RM 10.00 / Pasukan</div>
+              </div>
+              <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl font-bold">
+                <i class="fa-solid fa-users"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT PERSONS CARD (FROM POSTER) -->
+          <div class="glass-card p-4 rounded-xl border border-cyan-500/30 bg-cyan-950/20">
+            <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-headset"></i> Sebarang Pertanyaan Hubungi:
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <a href="https://wa.me/601126183719?text=Hai%20Sdri%20Atikah,%20saya%20nak%20tanya%20mengenai%20Esport%20Tour%20Smart%20Ummah" 
+                 target="_blank" 
+                 class="flex items-center gap-3 bg-gray-900/90 hover:bg-emerald-950/60 p-2.5 rounded-xl border border-gray-700 hover:border-emerald-500 text-gray-200 hover:text-emerald-300 transition-all group">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">Sdri Atikah</div>
+                  <div class="text-[11px] text-emerald-400 font-mono">011-2618 3719</div>
+                </div>
+              </a>
+
+              <a href="https://wa.me/60135197686?text=Hai%20Sdr%20Zarif,%20saya%20nak%20tanya%20mengenai%20Esport%20Tour%20Smart%20Ummah" 
+                 target="_blank" 
+                 class="flex items-center gap-3 bg-gray-900/90 hover:bg-emerald-950/60 p-2.5 rounded-xl border border-gray-700 hover:border-emerald-500 text-gray-200 hover:text-emerald-300 transition-all group">
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white">Sdr Zarif</div>
+                  <div class="text-[11px] text-emerald-400 font-mono">013-519 7686</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- LOCATION BANNER MINI CARD -->
+          <div class="glass-card p-4 rounded-xl border border-gray-800 bg-gray-900/60 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-lg shrink-0">
+                <i class="fa-solid fa-mosque"></i>
+              </div>
+              <div>
+                <div class="text-xs text-gray-400 font-medium">Lokasi Kejohanan</div>
+                <div class="text-xs font-bold text-white">Masjid Sultan Yussuf Izzuddin Shah, Seri Iskandar</div>
+              </div>
+            </div>
+            <a href="https://maps.google.com/?cid=6835113764742097413" target="_blank" 
+               class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-emerald-400 border border-emerald-500/30 rounded-lg text-xs font-bold shrink-0 transition-colors">
+              Peta Lokasi
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </header>
 
-  <main class="flex-grow">
-    <!-- HERO SECTION -->
-    <section class="relative min-h-[90vh] flex items-center justify-center py-16 px-4 overflow-hidden bg-grid-pattern">
-      <!-- Ambient Glow Effects -->
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-emerald/15 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute bottom-10 right-10 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
-        
-        <!-- Organizer Badges -->
-        <div class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full glass-panel border border-brand-emerald/30 text-xs sm:text-sm font-semibold">
-          <span class="text-brand-gold flex items-center gap-1.5">
-            <i class="fa-solid fa-trophy"></i> Sempena Hari Sukan Negara 2026
-          </span>
-          <span class="text-gray-500">•</span>
-          <span class="text-gray-300">Anjuran: Majlis Belia Negeri Perak & MBD Perak Tengah</span>
-        </div>
-
-        <!-- Main Heading -->
-        <div class="space-y-3">
-          <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white uppercase leading-tight">
-            ESPORT TOUR <span class="bg-gradient-to-r from-brand-emerald via-teal-300 to-brand-gold bg-clip-text text-transparent">SMART UMMAH</span><br>
-            DAERAH PERAK TENGAH 2026
-          </h1>
-          <p class="font-heading text-lg sm:text-2xl text-brand-gold tracking-widest font-bold uppercase italic">
-            "Battle. Compete. Champion."
-          </p>
-        </div>
-
-        <!-- Key Details Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-          <div class="glass-panel p-4 rounded-xl border border-gray-800 text-center hover:border-brand-emerald/50 transition">
-            <i class="fa-solid fa-calendar-days text-brand-emerald text-2xl mb-2"></i>
-            <div class="text-xs text-gray-400 font-semibold uppercase">Tarikh Pertandingan</div>
-            <div class="font-bold text-white text-base">10 OKTOBER 2026</div>
-            <div class="text-[11px] text-brand-emerald font-medium">(Sabtu)</div>
-          </div>
-          <div class="glass-panel p-4 rounded-xl border border-gray-800 text-center hover:border-brand-emerald/50 transition">
-            <i class="fa-solid fa-location-dot text-brand-gold text-2xl mb-2"></i>
-            <div class="text-xs text-gray-400 font-semibold uppercase">Lokasi Kejohanan</div>
-            <div class="font-bold text-white text-base">Masjid Sultan Yussuf Izzuddin Shah</div>
-            <div class="text-[11px] text-gray-400 font-medium">Seri Iskandar, Perak</div>
-          </div>
-          <div class="glass-panel p-4 rounded-xl border border-gray-800 text-center hover:border-brand-emerald/50 transition">
-            <i class="fa-solid fa-users text-brand-cyan text-2xl mb-2"></i>
-            <div class="text-xs text-gray-400 font-semibold uppercase">Status Kehadiran</div>
-            <div class="font-bold text-white text-base">Wajib Fizikal</div>
-            <div class="text-[11px] text-brand-gold font-medium">Tapak Pertandingan</div>
-          </div>
-        </div>
-
-        <!-- Countdown Timer -->
-        <div class="glass-panel p-6 rounded-2xl max-w-2xl mx-auto border border-brand-emerald/30">
-          <div class="text-xs uppercase font-heading tracking-widest text-gray-400 mb-3 flex items-center justify-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-            Masa Berbaki Sebelum Pendaftaran Ditutup
-          </div>
-          <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center font-heading">
-            <div class="bg-brand-dark/80 p-3 rounded-xl border border-gray-800">
-              <span id="cd-days" class="text-2xl sm:text-4xl font-black text-brand-emerald">00</span>
-              <span class="block text-[10px] sm:text-xs text-gray-400 uppercase mt-1">Hari</span>
-            </div>
-            <div class="bg-brand-dark/80 p-3 rounded-xl border border-gray-800">
-              <span id="cd-hours" class="text-2xl sm:text-4xl font-black text-brand-emerald">00</span>
-              <span class="block text-[10px] sm:text-xs text-gray-400 uppercase mt-1">Jam</span>
-            </div>
-            <div class="bg-brand-dark/80 p-3 rounded-xl border border-gray-800">
-              <span id="cd-mins" class="text-2xl sm:text-4xl font-black text-brand-emerald">00</span>
-              <span class="block text-[10px] sm:text-xs text-gray-400 uppercase mt-1">Minit</span>
-            </div>
-            <div class="bg-brand-dark/80 p-3 rounded-xl border border-gray-800">
-              <span id="cd-secs" class="text-2xl sm:text-4xl font-black text-brand-gold">00</span>
-              <span class="block text-[10px] sm:text-xs text-gray-400 uppercase mt-1">Saat</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a href="#pendaftaran" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-emerald via-teal-400 to-brand-gold text-black font-heading font-black text-lg shadow-xl glow-emerald hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3">
-            <i class="fa-solid fa-gamepad text-xl"></i>
-            DAFTAR SEKARANG
-          </a>
-          <a href="#format" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel border border-gray-700 hover:border-brand-emerald text-white font-heading font-bold text-base hover:bg-brand-emerald/10 transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-circle-info"></i>
-            FORMAT PERTANDINGAN
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TENTANG & KATEGORI SECTION -->
-    <section id="kategori" class="py-16 px-4 bg-brand-dark/90 border-t border-gray-800/80">
-      <div class="max-w-7xl mx-auto space-y-12">
-        
-        <!-- Section Header -->
-        <div class="text-center space-y-3 max-w-3xl mx-auto">
-          <span class="text-brand-emerald text-xs font-bold uppercase tracking-widest bg-brand-emerald/10 px-3 py-1 rounded-full border border-brand-emerald/20">
-            Pertandingan Utama
-          </span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-            KATEGORI & YURAN PENYERTAAN
-          </h2>
-          <p class="text-gray-400 text-sm sm:text-base">
-            Pilih acara eSports kegemaran anda. Tempat adalah TERHAD untuk menjamin kualiti dan kelancaran kejohanan.
-          </p>
-        </div>
-
-        <!-- Category Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <!-- eFootball Card -->
-          <div class="glass-panel rounded-2xl border border-gray-800 p-6 sm:p-8 relative overflow-hidden group hover:border-brand-emerald transition-all duration-300">
-            <div class="absolute top-0 right-0 bg-brand-emerald text-black font-heading font-black text-xs px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">
-              32 Peserta Sahaja
-            </div>
-            
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-800 flex items-center justify-center text-3xl text-white shadow-lg">
-                <i class="fa-solid fa-futbol"></i>
-              </div>
-              <div>
-                <h3 class="font-heading text-2xl font-black text-white">eFOOTBALL</h3>
-                <p class="text-xs text-brand-emerald font-semibold uppercase tracking-wider">Acara Solo (1 vs 1)</p>
-              </div>
-            </div>
-
-            <div class="space-y-4 text-sm text-gray-300 border-t border-b border-gray-800 py-4 mb-6">
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Yuran Penyertaan</span>
-                <span class="font-heading font-extrabold text-2xl text-brand-gold">RM 5 <span class="text-xs font-normal text-gray-400">/ pemain</span></span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Format Kejohanan</span>
-                <span class="font-semibold text-white">Group Stage + Knockout</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Masa Perlawanan</span>
-                <span class="font-semibold text-white">6 Minit (Single Match)</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Kehadiran</span>
-                <span class="font-semibold text-brand-emerald">Wajib di Tapak Kejohanan</span>
-              </div>
-            </div>
-
-            <a href="#pendaftaran" onclick="selectCategoryInForm('eFootball')" class="block w-full py-3 text-center rounded-xl font-heading font-bold bg-brand-emerald/20 hover:bg-brand-emerald text-brand-emerald hover:text-black border border-brand-emerald/40 transition">
-              DAFTAR eFOOTBALL (RM5)
-            </a>
-          </div>
-
-          <!-- MLBB Card -->
-          <div class="glass-panel rounded-2xl border border-gray-800 p-6 sm:p-8 relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
-            <div class="absolute top-0 right-0 bg-brand-gold text-black font-heading font-black text-xs px-4 py-1.5 rounded-bl-xl uppercase tracking-wider">
-              Acara Berpasukan
-            </div>
-            
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-700 flex items-center justify-center text-3xl text-white shadow-lg">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <div>
-                <h3 class="font-heading text-2xl font-black text-white">MOBILE LEGENDS</h3>
-                <p class="text-xs text-brand-gold font-semibold uppercase tracking-wider">Bang Bang (5 vs 5)</p>
-              </div>
-            </div>
-
-            <div class="space-y-4 text-sm text-gray-300 border-t border-b border-gray-800 py-4 mb-6">
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Yuran Penyertaan</span>
-                <span class="font-heading font-extrabold text-2xl text-brand-gold">RM 10 <span class="text-xs font-normal text-gray-400">/ pasukan</span></span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Keahlian Pasukan</span>
-                <span class="font-semibold text-white">5 Pemain Utama</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Check-In Pagi</span>
-                <span class="font-semibold text-brand-gold">7:30 Pagi – 8:15 Pagi</span>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-gray-400">Format Kejohanan</span>
-                <span class="font-semibold text-white">Kumpulan + System Kalah Mati</span>
-              </div>
-            </div>
-
-            <a href="#pendaftaran" onclick="selectCategoryInForm('Mobile Legends')" class="block w-full py-3 text-center rounded-xl font-heading font-bold bg-brand-gold/20 hover:bg-brand-gold text-brand-gold hover:text-black border border-brand-gold/40 transition">
-              DAFTAR MOBILE LEGENDS (RM10)
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FORMAT & PERATURAN SECTION -->
-    <section id="format" class="py-16 px-4 bg-brand-dark relative">
-      <div class="max-w-7xl mx-auto space-y-10">
-        
-        <div class="text-center space-y-3 max-w-3xl mx-auto">
-          <span class="text-brand-gold text-xs font-bold uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
-            Syarat & Format Syarat
-          </span>
-          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-            FORMAT PERTANDINGAN & PERATURAN
-          </h2>
-          <p class="text-gray-400 text-sm">
-            Sila baca dan fahami peraturan rasmi sebelum menghantar pendaftaran anda.
-          </p>
-        </div>
-
-        <!-- Format Tabs Nav -->
-        <div class="flex justify-center border-b border-gray-800">
-          <div class="flex gap-4">
-            <button id="tab-ef-btn" onclick="switchFormatTab('efootball')" class="py-3 px-6 font-heading font-bold text-sm border-b-2 border-brand-emerald text-brand-emerald transition flex items-center gap-2">
-              <i class="fa-solid fa-futbol"></i> eFootball Rules
-            </button>
-            <button id="tab-ml-btn" onclick="switchFormatTab('mlbb')" class="py-3 px-6 font-heading font-bold text-sm border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2">
-              <i class="fa-solid fa-shield-halved"></i> MLBB Rules
-            </button>
-          </div>
-        </div>
-
-        <!-- Tab Content: eFootball -->
-        <div id="tab-efootball" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-4">
-            <h3 class="font-heading text-lg font-bold text-brand-emerald flex items-center gap-2">
-              <i class="fa-solid fa-sitemap"></i> Format Kejohanan eFootball
-            </h3>
-            <ul class="space-y-3 text-sm text-gray-300">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-emerald mt-1"></i>
-                <span><strong>Jumlah Peserta:</strong> Terhad kepada 32 pemain sahaja.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-emerald mt-1"></i>
-                <span><strong>Peringkat Kumpulan:</strong> 4 pemain setiap kumpulan (Round Robin secara random tanpa jadual tetap).</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-emerald mt-1"></i>
-                <span><strong>Kelayakan:</strong> Top 2 setiap kumpulan layak ke peringkat kalah mati.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-emerald mt-1"></i>
-                <span><strong>Tetapan Perlawanan:</strong> Single Match | Masa: 6 Minit | Extra Time: OFF | Penalty: OFF.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-emerald mt-1"></i>
-                <span><strong>Sistem Mata:</strong> Menang = 3 Mata | Seri = 1 Mata | Kalah = 0 Mata.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-4">
-            <h3 class="font-heading text-lg font-bold text-brand-gold flex items-center gap-2">
-              <i class="fa-solid fa-triangle-exclamation"></i> Peraturan Khas & Speedtest
-            </h3>
-            <ul class="space-y-3 text-sm text-gray-300">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-ban text-red-400 mt-1"></i>
-                <span><strong>No Celebration & No Backpass:</strong> Dilarang sama sekali membuat keraian gol berlebihan & hantaran ke belakang secara sengaja untuk buang masa.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-wifi text-brand-gold mt-1"></i>
-                <span><strong>Ujian Speedtest Ookla:</strong> Peserta Wajib membuat ujian Speedtest bersama pihak lawan menggunakan aplikasi Ookla sebelum perlawanan.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-camera text-brand-gold mt-1"></i>
-                <span><strong>Bukti Keputusan:</strong> Screenshot keputusan penuh wajib dihantar ke WhatsApp Group Kumpulan & Tag Admin bertugas.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-headset text-brand-gold mt-1"></i>
-                <span><strong>Isu Sambungan:</strong> Sebarang masalah rangkaian hendaklah dilaporkan kepada admin dengan serta-merta.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Tab Content: MLBB (Hidden by default) -->
-        <div id="tab-mlbb" class="hidden grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-4">
-            <h3 class="font-heading text-lg font-bold text-brand-gold flex items-center gap-2">
-              <i class="fa-solid fa-clock"></i> Kehadiran & Semakan (Check-in)
-            </h3>
-            <div class="p-4 rounded-xl bg-brand-gold/10 border border-brand-gold/30 text-sm space-y-2">
-              <div class="font-bold text-brand-gold uppercase text-xs">Masa Check-in Rasmi</div>
-              <div class="text-xl font-heading font-black text-white">07:30 AM – 08:15 AM</div>
-              <p class="text-xs text-gray-300">
-                Semua pasukan wajib melaporkan kehadiran di meja urusetia sebelum jam 8:15 pagi. Kelewatan boleh mengakibatkan pembatalan penyertaan (Disqualified - DQ).
-              </p>
-            </div>
-            <ul class="space-y-3 text-sm text-gray-300">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-gold mt-1"></i>
-                <span><strong>Format Pasukan:</strong> 5 Pemain Utama (Semua wajib berada di tapak pertandingan).</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-check-circle text-brand-gold mt-1"></i>
-                <span><strong>Peringkat Awal & Kalah Mati:</strong> Top 2 setiap kumpulan mara ke sistem kalah mati (Knockout stage).</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 space-y-4">
-            <h3 class="font-heading text-lg font-bold text-brand-cyan flex items-center gap-2">
-              <i class="fa-solid fa-shuffle"></i> Peraturan Lobby & Shuffle Pasukan
-            </h3>
-            <ul class="space-y-3 text-sm text-gray-300">
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-random text-brand-cyan mt-1"></i>
-                <span><strong>Proses Shuffle:</strong> Selepas semakan check-in selesai, cabutan/shuffle kumpulan akan dibuat secara automatik dan dipaparkan di skrin utama & link rasmi.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-gamepad text-brand-cyan mt-1"></i>
-                <span><strong>Lobby Perlawanan:</strong> Kapten pasukan bertanggungjawab untuk Add Kapten lawan & create lobby (Classic / Draft Pick) mengikut arahan admin.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-plug-circle-exclamation text-brand-cyan mt-1"></i>
-                <span><strong>Disconnection:</strong> Jika berlaku Connection Lost, pemain mesti masuk semula secepat mungkin. Tiada Recreate Lobby kecuali dengan kebenaran Admin.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i class="fa-solid fa-battery-full text-brand-cyan mt-1"></i>
-                <span><strong>Kelengkapan Sendiri:</strong> Peserta bertanggungjawab menyediakan Powerbank & internet data persendirian.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CARA PENDAFTARAN -->
-    <section id="cara-daftar" class="py-16 px-4 bg-brand-dark/90 border-t border-gray-800">
-      <div class="max-w-6xl mx-auto space-y-12">
-        
-        <div class="text-center space-y-3">
-          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-            4 LANGKAH MUDAH PENDAFTARAN
-          </h2>
-          <p class="text-gray-400 text-sm">Ikuti langkah di bawah untuk mendaftar slot kejohanan anda.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center space-y-3 relative">
-            <div class="w-12 h-12 rounded-full bg-brand-emerald text-black font-heading font-black text-xl flex items-center justify-center mx-auto shadow-lg">1</div>
-            <h3 class="font-heading font-bold text-white text-base">Pilih Kategori</h3>
-            <p class="text-xs text-gray-400">Pilih eFootball (Solo) atau Mobile Legends (Pasukan) dalam borang pendaftaran.</p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center space-y-3 relative">
-            <div class="w-12 h-12 rounded-full bg-brand-emerald text-black font-heading font-black text-xl flex items-center justify-center mx-auto shadow-lg">2</div>
-            <h3 class="font-heading font-bold text-white text-base">Isi Maklumat</h3>
-            <p class="text-xs text-gray-400">Masukkan butiran diri atau maklumat lengkap 5 pemain pasukan anda.</p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center space-y-3 relative">
-            <div class="w-12 h-12 rounded-full bg-brand-emerald text-black font-heading font-black text-xl flex items-center justify-center mx-auto shadow-lg">3</div>
-            <h3 class="font-heading font-bold text-white text-base">Muat Naik Bayaran</h3>
-            <p class="text-xs text-gray-400">Buat pembayaran ke akaun rasmi dan muat naik bukti resit transaksi.</p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-2xl border border-gray-800 text-center space-y-3 relative">
-            <div class="w-12 h-12 rounded-full bg-brand-gold text-black font-heading font-black text-xl flex items-center justify-center mx-auto shadow-lg">4</div>
-            <h3 class="font-heading font-bold text-white text-base">Terima Slip & WA</h3>
-            <p class="text-xs text-gray-400">Dapatkan No. Pendaftaran automatik dan sahkan penyertaan melalui WhatsApp Admin.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- BORANG PENDAFTARAN SECTION -->
-    <section id="pendaftaran" class="py-16 px-4 bg-grid-pattern relative">
-      <div class="max-w-4xl mx-auto">
-        
-        <div class="glass-panel rounded-3xl border border-brand-emerald/40 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-          
-          <div class="text-center space-y-2 mb-8">
-            <span class="px-3 py-1 bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30 text-xs font-bold rounded-full uppercase">
-              Borang Rasmi Online
-            </span>
-            <h2 class="font-heading text-2xl sm:text-4xl font-black text-white">
-              BORANG PENDAFTARAN kejohanan
-            </h2>
-            <p class="text-xs sm:text-sm text-gray-400">
-              Sila pastikan semua maklumat tepat dan bukti pembayaran disertakan.
-            </p>
-          </div>
-
-          <!-- Registration Form -->
-          <form id="regForm" onsubmit="handleRegistrationSubmit(event)" class="space-y-8">
-            
-            <!-- Category Selector Buttons -->
-            <div class="space-y-3">
-              <label class="block text-xs font-heading uppercase text-gray-300 font-bold tracking-wider">
-                1. Pilih Kategori Pertandingan <span class="text-red-500">*</span>
-              </label>
-              <div class="grid grid-cols-2 gap-4">
-                <button type="button" id="btn-cat-ef" onclick="selectCategoryInForm('eFootball')" class="py-4 px-4 rounded-xl border-2 border-brand-emerald bg-brand-emerald/10 text-white font-heading font-bold text-sm sm:text-base flex flex-col items-center gap-1 transition shadow-lg">
-                  <i class="fa-solid fa-futbol text-2xl text-brand-emerald"></i>
-                  <span>eFOOTBALL</span>
-                  <span class="text-[11px] font-normal text-brand-emerald">RM 5.00 / pemain</span>
-                </button>
-
-                <button type="button" id="btn-cat-ml" onclick="selectCategoryInForm('Mobile Legends')" class="py-4 px-4 rounded-xl border-2 border-gray-800 bg-brand-dark/50 text-gray-400 font-heading font-bold text-sm sm:text-base flex flex-col items-center gap-1 transition hover:border-brand-gold">
-                  <i class="fa-solid fa-shield-halved text-2xl text-brand-gold"></i>
-                  <span>MOBILE LEGENDS</span>
-                  <span class="text-[11px] font-normal text-brand-gold">RM 10.00 / Pasukan</span>
-                </button>
-              </div>
-              <input type="hidden" id="inputCategory" name="category" value="eFootball" required>
-            </div>
-
-            <!-- Dynamic Form Fields: eFootball -->
-            <div id="fields-eFootball" class="space-y-5">
-              <div class="border-b border-gray-800 pb-2">
-                <h3 class="font-heading text-sm font-bold text-brand-emerald uppercase tracking-wider flex items-center gap-2">
-                  <i class="fa-solid fa-user"></i> Maklumat Pemain eFootball
-                </h3>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">Nama Penuh Peserta <span class="text-red-500">*</span></label>
-                  <input type="text" id="ef_nama" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-emerald focus:outline-none transition" placeholder="Contoh: Ahmad bin Razak" required>
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">No. Telefon WhatsApp <span class="text-red-500">*</span></label>
-                  <input type="tel" id="ef_phone" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-emerald focus:outline-none transition" placeholder="Contoh: 0123456789" required>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">E-mel <span class="text-red-500">*</span></label>
-                  <input type="email" id="ef_email" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-emerald focus:outline-none transition" placeholder="ahmad@gmail.com" required>
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">Nama Dalam Game (IGN) <span class="text-red-500">*</span></label>
-                  <input type="text" id="ef_ign" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-emerald focus:outline-none transition" placeholder="Contoh: FC_Ahmad99" required>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-gray-300 mb-1">User ID / Game ID eFootball <span class="text-red-500">*</span></label>
-                <input type="text" id="ef_gameid" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-emerald focus:outline-none transition" placeholder="Contoh: 849-204-102" required>
-              </div>
-            </div>
-
-            <!-- Dynamic Form Fields: Mobile Legends (Hidden initially) -->
-            <div id="fields-MLBB" class="space-y-6 hidden">
-              <div class="border-b border-gray-800 pb-2">
-                <h3 class="font-heading text-sm font-bold text-brand-gold uppercase tracking-wider flex items-center gap-2">
-                  <i class="fa-solid fa-users"></i> Maklumat Pasukan & Kapten MLBB
-                </h3>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">Nama Pasukan (Team Name) <span class="text-red-500">*</span></label>
-                  <input type="text" id="ml_team" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-gold focus:outline-none transition" placeholder="Contoh: Perak Esports Squad">
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">Nama Penuh Kapten <span class="text-red-500">*</span></label>
-                  <input type="text" id="ml_kapten" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-gold focus:outline-none transition" placeholder="Nama Kapten Pasukan">
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">No. Telefon Kapten (WhatsApp) <span class="text-red-500">*</span></label>
-                  <input type="tel" id="ml_phone" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-gold focus:outline-none transition" placeholder="01X-XXXXXXX">
-                </div>
-                <div>
-                  <label class="block text-xs font-semibold text-gray-300 mb-1">E-mel Kapten <span class="text-red-500">*</span></label>
-                  <input type="email" id="ml_email" class="w-full bg-brand-dark/90 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-gold focus:outline-none transition" placeholder="kapten@gmail.com">
-                </div>
-              </div>
-
-              <!-- 5 Players Inputs Grid -->
-              <div class="space-y-4 pt-2">
-                <label class="block text-xs font-heading uppercase text-brand-gold font-bold tracking-wider">
-                  Senarai 5 Pemain Wajib (Nama + Game ID & Server)
-                </label>
-
-                <!-- Player 1 -->
-                <div class="p-3 rounded-xl bg-brand-dark/60 border border-gray-800 space-y-2">
-                  <div class="text-xs font-bold text-gray-400">Pemain 1 (Kapten)</div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <input type="text" id="ml_p1_nama" placeholder="Nama Penuh Player 1" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                    <input type="text" id="ml_p1_id" placeholder="ID & Server (Contoh: 12345678 (1234))" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                  </div>
-                </div>
-
-                <!-- Player 2 -->
-                <div class="p-3 rounded-xl bg-brand-dark/60 border border-gray-800 space-y-2">
-                  <div class="text-xs font-bold text-gray-400">Pemain 2</div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <input type="text" id="ml_p2_nama" placeholder="Nama Penuh Player 2" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                    <input type="text" id="ml_p2_id" placeholder="ID & Server Player 2" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                  </div>
-                </div>
-
-                <!-- Player 3 -->
-                <div class="p-3 rounded-xl bg-brand-dark/60 border border-gray-800 space-y-2">
-                  <div class="text-xs font-bold text-gray-400">Pemain 3</div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <input type="text" id="ml_p3_nama" placeholder="Nama Penuh Player 3" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                    <input type="text" id="ml_p3_id" placeholder="ID & Server Player 3" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                  </div>
-                </div>
-
-                <!-- Player 4 -->
-                <div class="p-3 rounded-xl bg-brand-dark/60 border border-gray-800 space-y-2">
-                  <div class="text-xs font-bold text-gray-400">Pemain 4</div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <input type="text" id="ml_p4_nama" placeholder="Nama Penuh Player 4" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                    <input type="text" id="ml_p4_id" placeholder="ID & Server Player 4" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                  </div>
-                </div>
-
-                <!-- Player 5 -->
-                <div class="p-3 rounded-xl bg-brand-dark/60 border border-gray-800 space-y-2">
-                  <div class="text-xs font-bold text-gray-400">Pemain 5</div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <input type="text" id="ml_p5_nama" placeholder="Nama Penuh Player 5" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                    <input type="text" id="ml_p5_id" placeholder="ID & Server Player 5" class="bg-brand-dark border border-gray-700 rounded-lg p-2 text-xs text-white">
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- PAYMENT & PROOF SECTION -->
-            <div class="space-y-4 pt-4 border-t border-gray-800">
-              <div class="flex items-center justify-between bg-brand-dark/80 p-4 rounded-xl border border-gray-800">
-                <div>
-                  <div class="text-xs text-gray-400 uppercase font-semibold">Jumlah Perlu Dibayar</div>
-                  <div id="feeDisplay" class="text-2xl font-heading font-black text-brand-gold">RM 5.00</div>
-                </div>
-                <div class="text-right">
-                  <span class="text-[10px] text-gray-400 block">Akaun Bank Penganjur:</span>
-                  <span class="text-xs font-bold text-white block">AFFIN BANK</span>
-                  <span class="text-xs font-mono text-brand-emerald">105550000264</span>
-                  <span class="text-[10px] text-gray-400 block">Majlis Belia Daerah Perak Tengah</span>
-                </div>
-              </div>
-
-              <!-- Upload File -->
-              <div>
-                <label class="block text-xs font-semibold text-gray-300 mb-2">
-                  Muat Naik Bukti Pembayaran (Resit / QR Transfer) <span class="text-red-500">*</span>
-                </label>
-                <div class="flex items-center justify-center w-full">
-                  <label for="proofUpload" class="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-700 hover:border-brand-emerald rounded-2xl cursor-pointer bg-brand-dark/50 hover:bg-brand-dark transition">
-                    <div class="flex flex-col items-center justify-center pt-5 pb-6 text-center px-4">
-                      <i class="fa-solid fa-cloud-arrow-up text-2xl text-brand-emerald mb-2"></i>
-                      <p id="uploadText" class="text-xs text-gray-300">
-                        <span class="font-bold text-brand-emerald">Klik untuk muat naik</span> resit bayaran
-                      </p>
-                      <p class="text-[10px] text-gray-500 mt-1">PNG, JPG, JPEG atau PDF (Maksimum 5MB)</p>
-                    </div>
-                    <input id="proofUpload" type="file" accept="image/*,.pdf" onchange="handleFilePreview(this)" class="hidden" required>
-                  </label>
-                </div>
-                <div id="filePreviewContainer" class="hidden mt-2 flex items-center justify-between p-2 rounded-lg bg-brand-emerald/10 border border-brand-emerald/30 text-xs text-brand-emerald">
-                  <span id="fileName" class="truncate font-semibold">filename.png</span>
-                  <button type="button" onclick="resetFileUpload()" class="text-red-400 hover:text-red-300 ml-2 font-bold">X</button>
-                </div>
-              </div>
-
-              <!-- Consent Checkbox -->
-              <div class="flex items-start gap-3 pt-2">
-                <input type="checkbox" id="consent" class="mt-1 w-4 h-4 rounded accent-brand-emerald" required>
-                <label for="consent" class="text-xs text-gray-300 leading-relaxed">
-                  Saya mengesahkan bahawa maklumat yang diberikan adalah tepat dan saya bersetuju mematuhi semua <strong class="text-white">Peraturan & Syarat Kejohanan Esport Tour Smart Ummah Perak Tengah 2026</strong>.
-                </label>
-              </div>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" id="btnSubmit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-emerald via-teal-400 to-brand-gold text-black font-heading font-black text-lg shadow-xl hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2">
-              <i class="fa-solid fa-paper-plane"></i>
-              HANTAR PENDAFTARAN
-            </button>
-
-          </form>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-16 px-4 bg-brand-dark border-t border-gray-800">
-      <div class="max-w-4xl mx-auto space-y-8">
-        
-        <div class="text-center space-y-2">
-          <span class="text-brand-emerald text-xs font-bold uppercase tracking-widest bg-brand-emerald/10 px-3 py-1 rounded-full">Bantuan & FAQ</span>
-          <h2 class="font-heading text-3xl font-extrabold text-white">SOALAN LAZIM (FAQ)</h2>
-        </div>
-
-        <div class="space-y-4">
-          <details class="glass-panel rounded-xl p-4 border border-gray-800 group cursor-pointer">
-            <summary class="font-heading font-bold text-white text-sm sm:text-base flex justify-between items-center">
-              <span>Adakah pertandingan ini dijalankan secara dalam talian (Online) atau Fizikal?</span>
-              <i class="fa-solid fa-chevron-down text-brand-emerald transition-transform group-open:rotate-180"></i>
-            </summary>
-            <p class="mt-3 text-xs sm:text-sm text-gray-400 leading-relaxed">
-              Semua peserta WAJIB hadir secara fizikal di lokasi kejohanan (Masjid Sultan Yussuf Izzuddin Shah, Seri Iskandar) pada 10 Oktober 2026.
-            </p>
-          </details>
-
-          <details class="glass-panel rounded-xl p-4 border border-gray-800 group cursor-pointer">
-            <summary class="font-heading font-bold text-white text-sm sm:text-base flex justify-between items-center">
-              <span>Bagaimanakah proses pengesahan bayaran dilakukan?</span>
-              <i class="fa-solid fa-chevron-down text-brand-emerald transition-transform group-open:rotate-180"></i>
-            </summary>
-            <p class="mt-3 text-xs sm:text-sm text-gray-400 leading-relaxed">
-              Selepas mendaftar, urusetia akan menyemak bukti resit pembayaran anda. Anda boleh menekan butang WhatsApp Admin selepas pendaftaran untuk mempercepatkan proses pengesahan (VERIFIED).
-            </p>
-          </details>
-
-          <details class="glass-panel rounded-xl p-4 border border-gray-800 group cursor-pointer">
-            <summary class="font-heading font-bold text-white text-sm sm:text-base flex justify-between items-center">
-              <span>Bolehkah saya mendaftar untuk kedua-dua kategori eFootball dan MLBB?</span>
-              <i class="fa-solid fa-chevron-down text-brand-emerald transition-transform group-open:rotate-180"></i>
-            </summary>
-            <p class="mt-3 text-xs sm:text-sm text-gray-400 leading-relaxed">
-              Boleh, dengan syarat jadual perlawanan tidak bertembung dan anda mendaftar borang berasingan bagi setiap kategori.
-            </p>
-          </details>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- HUBUNGI ADMIN SECTION -->
-    <section id="hubungi" class="py-16 px-4 bg-brand-dark/95 border-t border-gray-800 text-center">
-      <div class="max-w-3xl mx-auto space-y-6">
-        <h2 class="font-heading text-3xl font-extrabold text-white">MEMPUNYAI SEBARANG SOALAN?</h2>
-        <p class="text-sm text-gray-400">
-          Urusetia kejohanan Majlis Belia Daerah Perak Tengah sedia membantu anda.
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="https://wa.me/60123456789?text=Salam%20Admin%20Esport%20Smart%20Ummah" target="_blank" class="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm flex items-center gap-2 transition shadow-lg">
-            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Admin 1 (012-3456789)
-          </a>
-          <a href="https://wa.me/60198765432?text=Salam%20Admin%20Esport%20Smart%20Ummah" target="_blank" class="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm flex items-center gap-2 transition shadow-lg">
-            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Admin 2 (019-8765432)
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-black/90 border-t border-gray-800/80 py-8 text-center text-xs text-gray-500">
-    <div class="max-w-7xl mx-auto px-4 space-y-3">
-      <div class="font-heading font-bold text-gray-300">
-        ESPORT TOUR SMART UMMAH DAERAH PERAK TENGAH 2026
-      </div>
-      <p>Anjuran Majlis Belia Negeri Perak & Majlis Belia Daerah Perak Tengah • Sempena Hari Sukan Negara</p>
-      <p class="text-[10px] text-gray-600">&copy; 2026 Hak Cipta Terpelihara.</p>
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-4xl mx-auto px-4 py-10 w-full flex-grow">
+    
+    <!-- GAME SELECTION TABS -->
+    <div class="flex p-1 bg-gray-900 rounded-xl border border-gray-800 mb-8 max-w-md mx-auto">
+      <button id="tabEFootballBtn" type="button" onclick="switchTab('eFootball')" 
+        class="flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-lg">
+        <i class="fa-solid fa-gamepad"></i> eFootball
+      </button>
+      <button id="tabMLBBBtn" type="button" onclick="switchTab('MLBB')" 
+        class="flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 text-gray-400 hover:text-white">
+        <i class="fa-solid fa-shield-halved"></i> MLBB (5v5)
+      </button>
     </div>
-  </footer>
 
-  <!-- MODAL: SUCCESS CONFIRMATION SLIP -->
-  <div id="successModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-    <div class="glass-panel w-full max-w-lg rounded-3xl border border-brand-emerald p-6 sm:p-8 space-y-6 my-8 relative animate-bounce-short">
-      
-      <div class="text-center space-y-2">
-        <div class="w-16 h-16 bg-brand-emerald/20 text-brand-emerald border border-brand-emerald rounded-full flex items-center justify-center text-3xl mx-auto shadow-lg">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <h3 class="font-heading text-2xl font-black text-white">TAHNIAH! PENDAFTARAN BERJAYA</h3>
-        <p class="text-xs text-gray-300">Pendaftaran anda telah direkodkan dalam sistem rasmi kejohanan.</p>
-      </div>
-
-      <!-- Receipt Slip Box -->
-      <div class="bg-brand-dark p-5 rounded-2xl border border-gray-800 space-y-3 text-sm">
-        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-          <span class="text-gray-400 text-xs">No. Pendaftaran</span>
-          <span id="slipRegNo" class="font-mono font-bold text-brand-emerald">EST2026-EF-1029</span>
-        </div>
-        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-          <span class="text-gray-400 text-xs">Kategori</span>
-          <span id="slipCategory" class="font-semibold text-white">eFootball</span>
-        </div>
-        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-          <span class="text-gray-400 text-xs">Nama / Pasukan</span>
-          <span id="slipName" class="font-semibold text-white">Ahmad bin Razak</span>
-        </div>
-        <div class="flex justify-between items-center border-b border-gray-800 pb-2">
-          <span class="text-gray-400 text-xs">Jumlah Bayaran</span>
-          <span id="slipFee" class="font-bold text-brand-gold">RM 5.00</span>
-        </div>
-        <div class="flex justify-between items-center">
-          <span class="text-gray-400 text-xs">Status Pembayaran</span>
-          <span id="slipStatus" class="px-2 py-0.5 rounded text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">
-            PENDING VERIFICATION
-          </span>
-        </div>
-      </div>
-
-      <div class="bg-brand-emerald/10 p-3 rounded-xl border border-brand-emerald/30 text-xs text-gray-300 space-y-1">
-        <div class="font-bold text-brand-emerald">Arahan Seterusnya:</div>
-        <p>Sila klik butang di bawah untuk menghantar No. Pendaftaran anda ke WhatsApp Admin bagi menyertai Group WhatsApp Rasmi Peserta.</p>
-      </div>
-
-      <div class="space-y-3">
-        <a id="btnWhatsappSlip" href="#" target="_blank" class="w-full py-3.5 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg">
-          <i class="fa-brands fa-whatsapp text-lg"></i> Hantar Ke WhatsApp Admin
-        </a>
-        <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl glass-panel border border-gray-700 text-gray-300 hover:text-white text-xs font-bold">
-          Kembali Ke Halaman Utama
+    <!-- SYARAT & PERATURAN CARD (DYNAMIC BY GAME) -->
+    <div class="glass-card rounded-2xl p-6 mb-8 border border-amber-500/30 shadow-xl relative overflow-hidden">
+      <div class="flex justify-between items-center border-b border-gray-800 pb-3 mb-4">
+        <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+          <i class="fa-solid fa-scroll text-amber-400"></i> Syarat & Peraturan Pertandingan
+        </h3>
+        <button type="button" onclick="toggleRulesContent()" class="text-xs text-gray-400 hover:text-white flex items-center gap-1 bg-gray-800 px-2.5 py-1 rounded-lg border border-gray-700">
+          <span id="rulesToggleText">Sembunyikan</span> <i id="rulesToggleIcon" class="fa-solid fa-chevron-up text-xs"></i>
         </button>
       </div>
 
+      <div id="rulesContentBox" class="space-y-4 text-xs text-gray-300 leading-relaxed transition-all">
+        
+        <!-- EFOOTBALL RULES -->
+        <div id="rulesEFootball" class="space-y-4">
+          <div class="bg-emerald-950/40 p-3 rounded-xl border border-emerald-500/30 flex items-center justify-between">
+            <span class="font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-gamepad"></i> Peraturan Khas: eFootball 2026 (Solo)
+            </span>
+            <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-[10px] font-semibold">32 Pemain</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Format Pertandingan -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-emerald-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-sitemap"></i> 1. Format Pertandingan
+              </div>
+              <ul class="space-y-1 pl-1 text-gray-300">
+                <li>• Jumlah: <strong>32 Pemain</strong> (8 Kumpulan, 4 pemain/kumpulan).</li>
+                <li>• Perlawanan menentang semua pemain dalam kumpulan.</li>
+                <li>• Susunan perlawanan secara <strong>RANDOM</strong> tanpa jadual tetap.</li>
+                <li>• <strong>TOP 2</strong> setiap kumpulan layak ke pusingan seterusnya.</li>
+              </ul>
+            </div>
+
+            <!-- Format Perlawanan -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-emerald-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-clock"></i> 2. Format Perlawanan
+              </div>
+              <ul class="space-y-1 pl-1 text-gray-300">
+                <li>• Format: <strong>SINGLE MATCH</strong></li>
+                <li>• Masa Perlawanan: <strong>6 MINIT</strong></li>
+                <li>• Extra Time: <strong>OFF</strong> | Penalty: <strong>OFF</strong></li>
+                <li class="text-red-400 font-semibold">• ❌ NO CELEBRATION</li>
+                <li class="text-red-400 font-semibold">• ❌ NO BACKPASS</li>
+              </ul>
+            </div>
+
+            <!-- Penghantaran Keputusan -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-emerald-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-camera"></i> 3. Penghantaran Keputusan
+              </div>
+              <p>Selepas setiap perlawanan:</p>
+              <ul class="space-y-1 pl-1 text-gray-300">
+                <li>• Ambil <strong>SCREENSHOT</strong> keputusan masa penuh.</li>
+                <li>• Hantar screenshot ke <strong>GROUP WHATSAPP</strong> kumpulan.</li>
+                <li>• <strong>TAG ADMIN/PETUGAS</strong> yang bertugas.</li>
+                <li>• Screenshot mestilah jelas dan menunjukkan keputusan penuh.</li>
+              </ul>
+            </div>
+
+            <!-- Kiraan Mata -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-emerald-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-calculator"></i> 4. Kiraan Mata
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center pt-1">
+                <div class="bg-emerald-900/40 p-2 rounded-lg border border-emerald-500/30">
+                  <div class="font-bold text-emerald-400">MENANG</div>
+                  <div class="text-base font-black text-white">3 Mata</div>
+                </div>
+                <div class="bg-amber-900/40 p-2 rounded-lg border border-amber-500/30">
+                  <div class="font-bold text-amber-400">SERI</div>
+                  <div class="text-base font-black text-white">1 Mata</div>
+                </div>
+                <div class="bg-red-900/40 p-2 rounded-lg border border-red-500/30">
+                  <div class="font-bold text-red-400">KALAH</div>
+                  <div class="text-base font-black text-white">0 Mata</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pemeriksaan Connection -->
+          <div class="bg-amber-500/10 border border-amber-500/30 p-3 rounded-xl space-y-1 text-amber-200">
+            <div class="font-bold text-amber-300 flex items-center gap-1.5 text-xs">
+              <i class="fa-solid fa-wifi"></i> 5. PEMERIKSAAN CONNECTION (WAJIB)
+            </div>
+            <p class="text-[11px] leading-relaxed">
+              Sila minta <strong>SPEEDTEST</strong> daripada pihak lawan terlebih dahulu sebelum match dimulakan bagi mengelakkan sebarang pertikaian berkaitan connection. Gunakan aplikasi <strong>Speedtest by Ookla</strong>. Sebarang isu connection hendaklah dimaklumkan terus kepada Admin/Crew bertugas.
+            </p>
+          </div>
+        </div>
+
+        <!-- MLBB RULES -->
+        <div id="rulesMLBB" class="space-y-4 hidden">
+          <div class="bg-purple-950/40 p-3 rounded-xl border border-purple-500/30 flex items-center justify-between">
+            <span class="font-bold text-purple-400 uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved"></i> Peraturan Khas: Mobile Legends Bang Bang (5v5)
+            </span>
+            <span class="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-[10px] font-semibold">32 Pasukan</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Kehadiran Pemain -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-purple-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-user-clock"></i> 1. Kehadiran Pemain
+              </div>
+              <ul class="space-y-1 pl-1 text-gray-300">
+                <li>• Semua PLAYER <strong>WAJIB berada di tapak pertandingan</strong> sepanjang acara.</li>
+                <li class="text-amber-300 font-bold">• Waktu Kehadiran: 7:30 PAGI - 8:15 PAGI</li>
+                <li>• Team WAJIB melaporkan kehadiran kepada CREW sebelum jam 8:15 PAGI.</li>
+                <li class="text-red-400 font-medium">• Kelewatan boleh mengakibatkan pembatalan / <strong>DISQUALIFIED (DQ)</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- Format Kumpulan -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-purple-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-diagram-project"></i> 2. Format Pertandingan
+              </div>
+              <ul class="space-y-1 pl-1 text-gray-300">
+                <li>• Team dibahagikan kepada beberapa kumpulan.</li>
+                <li>• <strong>TOP 2</strong> setiap kumpulan layak ke pusingan seterusnya.</li>
+                <li>• Peringkat seterusnya menggunakan format <strong>KALAH MATI (KNOCKOUT)</strong>.</li>
+                <li>• Team yang menang sahaja akan layak ke pusingan seterusnya.</li>
+              </ul>
+            </div>
+
+            <!-- Shuffle / Draw & Lobby -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-purple-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-shuffle"></i> 3. Random Draw & Lobby
+              </div>
+              <ul class="space-y-1 pl-1 text-gray-300">
+                <li>• Keputusan kumpulan dipaparkan menerusi monitor / link khas.</li>
+                <li>• Kapten hendaklah <strong>ADD KAPTEN lawan</strong> & bersedia create lobby.</li>
+                <li>• Lobby guna format <strong>CLASSIC / DRAFT PICK</strong> mengikut tetapan.</li>
+                <li>• ❌ TIADA RECREATE LOBBY tanpa arahan Admin.</li>
+              </ul>
+            </div>
+
+            <!-- Connection & Kelengkapan -->
+            <div class="bg-gray-900/80 p-3.5 rounded-xl border border-gray-800 space-y-1.5">
+              <div class="font-bold text-white text-sm text-purple-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-plug"></i> 4. Kelengkapan Pemain
+              </div>
+              <p class="text-gray-400">Sila bawa kelengkapan sendiri:</p>
+              <div class="grid grid-cols-2 gap-1 text-[11px] font-medium text-gray-200">
+                <div>🔋 Powerbank</div>
+                <div>🔌 Kabel pengecas</div>
+                <div>📱 Telefon / Peranti</div>
+                <div>🌐 Internet stabil</div>
+                <div class="col-span-2">🎧 Earphone / Headset</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Peringatan Penting MLBB -->
+          <div class="bg-purple-900/20 border border-purple-500/30 p-3 rounded-xl space-y-1 text-purple-200">
+            <div class="font-bold text-purple-300 flex items-center gap-1.5 text-xs">
+              <i class="fa-solid fa-triangle-exclamation"></i> 5. PERINGATAN PENTING & HAK URUSETIA
+            </div>
+            <p class="text-[11px] leading-relaxed">
+              Sila hadir AWAL, pastikan peranti/internet berada dalam keadaan baik. <strong>KEPUTUSAN PIHAK URUSETIA / ADMIN BERTUGAS ADALAH MUKTAMAD</strong> bagi menyelesaikan sebarang isu sepanjang pertandingan.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- REGISTRATION FORM -->
+    <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl relative">
+      
+      <form id="registrationForm" onsubmit="handleFormSubmit(event)">
+        
+        <input type="hidden" id="categoryInput" name="category" value="eFootball">
+
+        <!-- SECTION: EFOOTBALL FORM -->
+        <div id="eFootballSection" class="space-y-6">
+          <div class="border-b border-gray-800 pb-4">
+            <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2">
+              <i class="fa-solid fa-user-pen"></i> Maklumat Peserta eFootball
+            </h3>
+            <p class="text-xs text-gray-400 mt-1">Sila isi semua maklumat individu dengan tepat.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Nama Penuh <span class="text-red-500">*</span></label>
+              <input type="text" id="ef_name" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: Ahmad Bin Ali">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Kad Pengenalan <span class="text-red-500">*</span></label>
+              <input type="text" id="ef_nokp" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 020512085432">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Telefon (WhatsApp) <span class="text-red-500">*</span></label>
+              <input type="tel" id="ef_phone" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 0123456789">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Nama Dalam Game (IGN) <span class="text-red-500">*</span></label>
+              <input type="text" id="ef_gameName" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: KingPes99">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Game ID (User ID eFootball) <span class="text-red-500">*</span></label>
+              <input type="text" id="ef_gameId" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 123-456-789">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Alamat Kediaman <span class="text-red-500">*</span></label>
+              <textarea id="ef_address" rows="2" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Alamat penuh di Perak Tengah / Seri Iskandar"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION: MLBB FORM -->
+        <div id="mlbbSection" class="space-y-6 hidden">
+          <div class="border-b border-gray-800 pb-4">
+            <h3 class="text-xl font-bold text-purple-400 flex items-center gap-2">
+              <i class="fa-solid fa-users"></i> Maklumat Pasukan MLBB (5 Pemain Utama)
+            </h3>
+            <p class="text-xs text-gray-400 mt-1">Sila lengkapkan maklumat nama pasukan, kapten, dan kesemua 5 pemain.</p>
+          </div>
+
+          <!-- TEAM & CAPTAIN INFO -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-purple-950/20 p-4 rounded-xl border border-purple-900/40">
+            <div>
+              <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">Nama Pasukan <span class="text-red-500">*</span></label>
+              <input type="text" id="ml_team" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 text-white" placeholder="Contoh: Seri Iskandar Esports">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase text-purple-300 mb-1">Nama Kapten Pasukan <span class="text-red-500">*</span></label>
+              <input type="text" id="ml_captain" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-purple-500 text-white" placeholder="Contoh: Muhammad Ammar">
+            </div>
+          </div>
+
+          <!-- PLAYERS TABS / LIST -->
+          <div id="mlbbPlayersContainer" class="space-y-6">
+            <!-- Dynamic 5 players generated via JS -->
+          </div>
+        </div>
+
+        <!-- PAYMENT & RECEIPT SECTION (BANK DETAILS ONLY) -->
+        <div class="mt-8 pt-6 border-t border-gray-800">
+          <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-building-columns text-amber-400"></i> Maklumat Pembayaran Yuran Akaun Bank
+          </h3>
+
+          <div class="bg-gradient-to-r from-gray-900 via-gray-900/90 to-emerald-950/40 p-6 rounded-xl border border-emerald-500/30 mb-6 relative overflow-hidden">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative z-10">
+              
+              <div class="space-y-2">
+                <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20">
+                  <i class="fa-solid fa-piggy-bank"></i> TRANSFER / ONLINE BANKING
+                </div>
+                
+                <div class="text-xs text-gray-400 uppercase font-semibold">Nama Bank</div>
+                <div class="text-xl font-black text-emerald-400 tracking-wide">AFFIN BANK</div>
+
+                <div class="space-y-1">
+                  <div class="text-xs text-gray-400 font-medium">Nombor Akaun:</div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span id="accNum" class="font-mono text-2xl font-black text-white bg-black/60 px-3 py-1 rounded-lg border border-gray-700 tracking-wider">
+                      105550000264
+                    </span>
+                    <button type="button" onclick="copyAccNumber()" class="px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg flex items-center gap-1.5 transition-colors shadow">
+                      <i class="fa-regular fa-copy"></i> <span id="copyBtnText">Salin No. Akaun</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="text-xs text-gray-300 pt-1">
+                  <strong>Nama Akaun:</strong> <span class="text-gray-100 font-semibold">Majlis Belia Daerah Perak Tengah</span>
+                </div>
+              </div>
+
+              <div class="sm:text-right border-t sm:border-t-0 sm:border-l border-gray-800 pt-3 sm:pt-0 sm:pl-6 w-full sm:w-auto">
+                <div class="text-xs text-gray-400 font-semibold mb-1">Kadar Yuran Penyertaan</div>
+                <div id="feeDisplay" class="text-lg font-black text-amber-400 bg-amber-500/10 px-4 py-2 rounded-xl border border-amber-500/30 inline-block">
+                  RM 5.00 / Peserta
+                </div>
+                <div class="text-[11px] text-gray-400 mt-2">
+                  <i class="fa-solid fa-circle-info text-emerald-400"></i> Sila simpan bukti pembayaran resit rasmi.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- FILE UPLOAD -->
+          <div>
+            <label class="block text-xs font-semibold uppercase text-gray-300 mb-2">
+              Muat Naik Resit Pembayaran (Imej / PDF) <span class="text-red-500">*</span>
+            </label>
+            <div class="relative border-2 border-dashed border-gray-700 hover:border-emerald-500 rounded-xl p-5 text-center bg-gray-900/50 transition-all cursor-pointer" id="dropzone">
+              <input type="file" id="proofInput" accept="image/*,application/pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="handleFileSelect(event)" required>
+              
+              <div id="uploadPlaceholder" class="space-y-2">
+                <i class="fa-solid fa-cloud-arrow-up text-3xl text-emerald-400"></i>
+                <div class="text-sm text-gray-300 font-medium">Klik atau seret fail resit pembayaran ke sini</div>
+                <div class="text-xs text-gray-500">Maksimum saiz: 3MB (Format JPG, PNG, PDF)</div>
+              </div>
+
+              <div id="uploadPreview" class="hidden flex items-center justify-between bg-gray-800 p-3.5 rounded-lg">
+                <div class="flex items-center gap-3 overflow-hidden">
+                  <i class="fa-solid fa-file-circle-check text-emerald-400 text-2xl"></i>
+                  <div class="text-left truncate">
+                    <div id="fileName" class="text-sm font-semibold text-white truncate">resit.jpg</div>
+                    <div id="fileSize" class="text-xs text-gray-400">0 KB</div>
+                  </div>
+                </div>
+                <button type="button" onclick="clearFile()" class="text-gray-400 hover:text-red-400 px-2 py-1">
+                  <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="mt-8">
+          <button type="submit" id="submitBtn" 
+            class="w-full py-4 px-6 rounded-xl font-bold text-lg text-black bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 hover:from-emerald-300 hover:to-teal-400 shadow-lg shadow-emerald-500/20 transition-all duration-200 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Hantar Pendaftaran
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL: POSTER FULL VIEW -->
+  <div id="posterModal" class="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 z-50 hidden" onclick="closePosterModal()">
+    <div class="relative max-w-lg w-full p-2" onclick="event.stopPropagation()">
+      <button onclick="closePosterModal()" class="absolute -top-10 right-0 text-white text-2xl hover:text-red-400 transition-colors">
+        <i class="fa-solid fa-xmark"></i> Tutup
+      </button>
+
+      <!-- FULL POSTER DISPLAY -->
+      <div class="bg-gradient-to-br from-gray-950 via-emerald-950 to-purple-950 p-6 sm:p-8 rounded-2xl border-2 border-emerald-500/50 shadow-2xl relative overflow-hidden text-center space-y-5">
+        
+        <div class="inline-block bg-emerald-500/20 border border-emerald-500/40 px-4 py-1 rounded-full text-emerald-400 font-bold text-xs uppercase tracking-widest">
+          POSTER RASMI KEJOHANAN
+        </div>
+
+        <div>
+          <h2 class="font-heading text-4xl sm:text-5xl font-black text-white leading-tight uppercase">
+            ESPORT TOUR <br>
+            <span class="text-emerald-400">SMART UMMAH</span>
+          </h2>
+          <p class="text-xs font-bold text-amber-300 uppercase tracking-widest mt-1">DAERAH PERAK TENGAH 2026</p>
+          <div class="text-[11px] font-extrabold text-gray-300 tracking-wider mt-0.5">
+            GAMING • UNITY • POSITIVE YOUTH
+          </div>
+        </div>
+
+        <!-- PRIZE GRID IN MODAL -->
+        <div class="grid grid-cols-2 gap-3 my-2 text-left">
+          <div class="bg-emerald-950/80 p-3.5 rounded-xl border border-emerald-500/40 space-y-1">
+            <div class="text-xs font-bold text-emerald-400 flex items-center gap-1">
+              <i class="fa-solid fa-gamepad"></i> eFootball (Solo)
+            </div>
+            <div class="text-xs font-bold text-amber-300">🥇 Johan: RM 250</div>
+            <div class="text-[11px] text-gray-200">🥈 Naib Johan: RM 150</div>
+            <div class="text-[11px] text-gray-400">🥉 Ketiga: RM 100</div>
+            <div class="text-[10px] text-emerald-300 pt-1">Yuran: RM 5.00</div>
+          </div>
+
+          <div class="bg-purple-950/80 p-3.5 rounded-xl border border-purple-500/40 space-y-1">
+            <div class="text-xs font-bold text-purple-400 flex items-center gap-1">
+              <i class="fa-solid fa-shield-halved"></i> MLBB (5v5)
+            </div>
+            <div class="text-xs font-bold text-amber-300">🥇 Johan: RM 450</div>
+            <div class="text-[11px] text-gray-200">🥈 Naib Johan: RM 350</div>
+            <div class="text-[11px] text-gray-400">🥉 Ketiga: RM 200</div>
+            <div class="text-[10px] text-purple-300 pt-1">Yuran: RM 10.00 / Pasukan</div>
+          </div>
+        </div>
+
+        <!-- VENUE INFO & CONTACTS IN MODAL -->
+        <div class="bg-gray-900/90 p-4 rounded-xl border border-gray-800 text-left space-y-2 text-xs text-gray-200">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold">
+            <i class="fa-regular fa-calendar-days text-base"></i>
+            <span>Tarikh: SABTU, 10 OKTOBER 2026</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <i class="fa-solid fa-location-dot text-red-400 text-base mt-0.5"></i>
+            <div>
+              <div class="font-bold text-white">Masjid Sultan Yussuf Izzuddin Shah</div>
+              <div class="text-gray-400 text-[11px]">Seri Iskandar, Perak Tengah</div>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 pt-2 text-[11px] flex justify-between items-center flex-wrap gap-2 text-cyan-300">
+            <span><i class="fa-solid fa-phone"></i> Sdri Atikah: 011-2618 3719</span>
+            <span><i class="fa-solid fa-phone"></i> Sdr Zarif: 013-519 7686</span>
+          </div>
+        </div>
+
+        <button onclick="closePosterModal()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm transition-colors shadow-lg">
+          Tutup Paparan Poster
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- MODAL: ADMIN LOGIN & DASHBOARD -->
-  <div id="adminModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-    <div class="glass-panel w-full max-w-5xl rounded-3xl border border-gray-800 p-6 sm:p-8 space-y-6 my-8 max-h-[90vh] overflow-y-auto relative">
+  <!-- MODAL: SUCCESS / REGISTRATION RECEIPT -->
+  <div id="successModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+    <div class="glass-card max-w-md w-full p-6 sm:p-8 rounded-2xl border border-emerald-500/30 text-center relative glow-effect-green">
       
-      <!-- Close Button -->
-      <button onclick="toggleAdminModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white text-xl">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+      <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 text-3xl mx-auto mb-4 border border-emerald-500/40">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
 
-      <!-- Admin Passcode Screen -->
-      <div id="adminAuthScreen" class="text-center py-8 space-y-4 max-w-md mx-auto">
-        <div class="w-16 h-16 rounded-full bg-brand-emerald/20 border border-brand-emerald text-brand-emerald flex items-center justify-center text-2xl mx-auto">
-          <i class="fa-solid fa-lock"></i>
+      <h3 class="text-2xl font-bold text-white mb-1">Pendaftaran Berjaya!</h3>
+      <p class="text-xs text-gray-400 mb-6">Pendaftaran anda telah direkodkan dalam sistem backend.</p>
+
+      <div class="bg-gray-900/90 p-4 rounded-xl border border-gray-800 text-left space-y-2 mb-6">
+        <div class="text-xs text-gray-500 uppercase font-semibold">ID Pendaftaran</div>
+        <div id="resId" class="font-mono text-xl font-bold text-emerald-400">EST2026-EF-XXXX</div>
+        <div class="border-t border-gray-800 pt-2 mt-2 text-xs text-gray-300">
+          Status: <span class="bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-semibold">Menunggu Semakan Urusetia</span>
         </div>
-        <h3 class="font-heading text-2xl font-black text-white">LOG MASUK ADMIN</h3>
-        <p class="text-xs text-gray-400">Sistem Pengurusan Urusetia Esport Tour Smart Ummah 2026</p>
-        <div class="space-y-3">
-          <input type="password" id="adminPin" placeholder="Masukkan PIN Admin (Lalai: admin2026)" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-4 py-3 text-sm text-center text-white focus:border-brand-emerald focus:outline-none">
-          <button onclick="verifyAdminPin()" class="w-full py-3 bg-brand-emerald hover:bg-brand-emeraldHover text-black font-bold text-sm rounded-xl transition">
-            LULUSKAN CAPAIAN
+      </div>
+
+      <p class="text-xs text-gray-400 mb-6">Sila simpan ID Pendaftaran anda untuk rujukan semasa hari kejohanan di Masjid Sultan Yussuf Izzuddin Shah.</p>
+
+      <button onclick="closeSuccessModal()" class="w-full py-3 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl text-sm transition-colors">
+        Tutup
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL: API SCRIPT URL CONFIG -->
+  <div id="configModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+    <div class="glass-card max-w-lg w-full p-6 rounded-2xl border border-gray-700 text-left">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-plug text-emerald-400"></i> Tetapan Web App URL
+        </h3>
+        <button onclick="closeConfigModal()" class="text-gray-400 hover:text-white">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-gray-400 mb-4">
+        Masukkan URL Google Apps Script yang telah di-deploy sebagai <b>Web App</b> (Execute as: <i>Me</i>, Who has access: <i>Anyone</i>).
+      </p>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Google Web App URL</label>
+          <input type="url" id="scriptUrlInput" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs font-mono text-emerald-300 focus:outline-none focus:border-emerald-500" placeholder="https://script.google.com/macros/s/.../exec">
+        </div>
+
+        <div class="bg-gray-900 p-3 rounded-lg border border-gray-800 text-[11px] text-gray-400 space-y-1">
+          <div class="font-bold text-gray-300 mb-1">Panduan Pelaksanaan Script:</div>
+          <div>1. Di Apps Script, tekan <b>Deploy</b> > <b>New Deployment</b>.</div>
+          <div>2. Pilih Type: <b>Web App</b>.</div>
+          <div>3. Execute as: <b>Me</b>.</div>
+          <div>4. Who has access: <b>Anyone</b>.</div>
+          <div>5. Salin Web App URL dan tampal di atas.</div>
+        </div>
+
+        <div class="flex gap-2">
+          <button onclick="saveScriptUrl()" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs">
+            Simpan & Muat Semula
+          </button>
+          <button onclick="closeConfigModal()" class="py-2.5 px-4 bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold rounded-lg text-xs">
+            Batal
           </button>
         </div>
       </div>
-
-      <!-- Admin Dashboard Content (Hidden until authenticated) -->
-      <div id="adminDashboardContent" class="hidden space-y-6">
-        
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-gray-800 pb-4">
-          <div>
-            <h3 class="font-heading text-2xl font-black text-white flex items-center gap-2">
-              <i class="fa-solid fa-gauge-high text-brand-emerald"></i> DASHBOARD ADMIN
-            </h3>
-            <p class="text-xs text-gray-400">Pengurusan Peserta & Pengesahan Yuran Pembayaran</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <button onclick="exportDataCSV()" class="px-3 py-2 bg-brand-dark border border-gray-700 hover:border-brand-emerald rounded-lg text-xs text-gray-300 font-bold flex items-center gap-2">
-              <i class="fa-solid fa-file-csv text-brand-emerald"></i> Export CSV
-            </button>
-            <button onclick="logoutAdmin()" class="px-3 py-2 bg-red-500/20 text-red-400 border border-red-500/30 rounded-lg text-xs font-bold">
-              Log Keluar
-            </button>
-          </div>
-        </div>
-
-        <!-- Summary Statistics Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
-          <div class="bg-brand-dark p-4 rounded-xl border border-gray-800">
-            <div class="text-xs text-gray-400">Jumlah Pendaftaran</div>
-            <div id="statTotalCount" class="text-2xl font-heading font-black text-white">0</div>
-          </div>
-          <div class="bg-brand-dark p-4 rounded-xl border border-gray-800">
-            <div class="text-xs text-gray-400">eFootball (Solo)</div>
-            <div id="statEFCount" class="text-2xl font-heading font-black text-brand-emerald">0</div>
-          </div>
-          <div class="bg-brand-dark p-4 rounded-xl border border-gray-800">
-            <div class="text-xs text-gray-400">MLBB (Pasukan)</div>
-            <div id="statMLCount" class="text-2xl font-heading font-black text-brand-gold">0</div>
-          </div>
-          <div class="bg-brand-dark p-4 rounded-xl border border-gray-800">
-            <div class="text-xs text-gray-400">Jumlah Kutipan Yuran</div>
-            <div id="statTotalFees" class="text-2xl font-heading font-black text-brand-cyan">RM 0.00</div>
-          </div>
-        </div>
-
-        <!-- Filter & Search Controls -->
-        <div class="flex flex-col sm:flex-row gap-3">
-          <input type="text" id="adminSearchInput" oninput="renderAdminTable()" placeholder="Cari Nama / Pasukan / No Tel / ID..." class="flex-grow bg-brand-dark border border-gray-800 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-brand-emerald">
-          <select id="adminCategoryFilter" onchange="renderAdminTable()" class="bg-brand-dark border border-gray-800 rounded-xl px-4 py-2 text-xs text-white">
-            <option value="ALL">Semua Kategori</option>
-            <option value="eFootball">eFootball</option>
-            <option value="Mobile Legends">Mobile Legends</option>
-          </select>
-          <select id="adminStatusFilter" onchange="renderAdminTable()" class="bg-brand-dark border border-gray-800 rounded-xl px-4 py-2 text-xs text-white">
-            <option value="ALL">Semua Status</option>
-            <option value="PENDING">PENDING</option>
-            <option value="VERIFIED">VERIFIED</option>
-            <option value="REJECTED">REJECTED</option>
-          </select>
-        </div>
-
-        <!-- Data Table -->
-        <div class="overflow-x-auto border border-gray-800 rounded-2xl">
-          <table class="w-full text-left text-xs text-gray-300">
-            <thead class="bg-brand-dark text-gray-400 font-heading text-[11px] uppercase tracking-wider border-b border-gray-800">
-              <tr>
-                <th class="p-3">No. Reg</th>
-                <th class="p-3">Kategori</th>
-                <th class="p-3">Nama / Pasukan</th>
-                <th class="p-3">Telefon</th>
-                <th class="p-3">Jumlah</th>
-                <th class="p-3">Status</th>
-                <th class="p-3 text-center">Tindakan Admin</th>
-              </tr>
-            </thead>
-            <tbody id="adminTableBody" class="divide-y divide-gray-800">
-              <!-- Rendered via JS -->
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-
     </div>
   </div>
 
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500 bg-gray-950">
+    <div class="max-w-6xl mx-auto px-4">
+      <p>© 2026 ESPORT TOUR SMART UMMAH DAERAH PERAK TENGAH. Hak Cipta Terpelihara.</p>
+      <p class="mt-1 text-[11px] text-gray-600">Lokasi: Masjid Sultan Yussuf Izzuddin Shah, Seri Iskandar, Perak</p>
+    </div>
+  </footer>
+
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    /* =========================================================
-       STATE MANAGEMENT & MOCK DATA
-       ========================================================= */
-    const ADMIN_PIN = "admin2026";
-    let selectedCategory = "eFootball";
-    let selectedFileBase64 = null;
+    // CONFIG & STATE
+    let webAppUrl = localStorage.getItem('SMART_UMMAH_SCRIPT_URL') || '';
+    let base64Proof = '';
+    let isRulesVisible = true;
 
-    // Initial Mock Registrations
-    const initialRegistrations = [
-      {
-        id: "EST2026-EF-1001",
-        category: "eFootball",
-        name: "Muhammad Danish",
-        phone: "0178829102",
-        email: "danish@gmail.com",
-        ign: "Danish_Pro",
-        gameId: "902-182-391",
-        fee: 5,
-        status: "VERIFIED",
-        date: "2026-10-01"
-      },
-      {
-        id: "EST2026-EF-1002",
-        category: "eFootball",
-        name: "Amirul Haziq",
-        phone: "0192384711",
-        email: "amirul@gmail.com",
-        ign: "Haz_Striker",
-        gameId: "123-948-201",
-        fee: 5,
-        status: "PENDING",
-        date: "2026-10-01"
-      },
-      {
-        id: "EST2026-ML-2001",
-        category: "Mobile Legends",
-        name: "Perak Apex Gaming",
-        captain: "Khairul Nizam",
-        phone: "0139928172",
-        email: "apex@gmail.com",
-        players: "1. Khairul Nizam\n2. Hafizudin\n3. Luqman Hakim\n4. Azman Syafiq\n5. Zikri Ahmad",
-        fee: 10,
-        status: "VERIFIED",
-        date: "2026-10-01"
+    // INIT
+    document.addEventListener('DOMContentLoaded', () => {
+      initMLBBPlayersForm();
+      checkScriptUrl();
+      if (webAppUrl) {
+        fetchCounts();
       }
-    ];
+    });
 
-    // Load from localStorage or set defaults
-    function getStoredRegistrations() {
-      const stored = localStorage.getItem("smart_ummah_registrations");
-      if (stored) {
-        try { return JSON.parse(stored); } catch(e) {}
+    function checkScriptUrl() {
+      const statusEl = document.getElementById('scriptUrlStatus');
+      const urlInput = document.getElementById('scriptUrlInput');
+      urlInput.value = webAppUrl;
+
+      if (webAppUrl) {
+        statusEl.className = 'text-emerald-400 flex items-center gap-1.5 font-medium';
+        statusEl.innerHTML = '<i class="fa-solid fa-circle-check"></i> Web App Disambung';
+      } else {
+        statusEl.className = 'text-amber-400 flex items-center gap-1.5 font-medium';
+        statusEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> URL Web App Belum Diset';
       }
-      localStorage.setItem("smart_ummah_registrations", JSON.stringify(initialRegistrations));
-      return initialRegistrations;
     }
 
-    function saveRegistrations(data) {
-      localStorage.setItem("smart_ummah_registrations", JSON.stringify(data));
+    function openConfigModal() {
+      document.getElementById('configModal').classList.remove('hidden');
     }
 
-    /* =========================================================
-       COUNTDOWN TIMER LOGIC
-       ========================================================= */
-    function initCountdown() {
-      // Event Date: October 10, 2026 08:00:00
-      const targetDate = new Date("October 10, 2026 08:00:00").getTime();
+    function closeConfigModal() {
+      document.getElementById('configModal').classList.add('hidden');
+    }
 
-      function update() {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
+    function saveScriptUrl() {
+      const val = document.getElementById('scriptUrlInput').value.trim();
+      if (!val) {
+        alert('Sila masukkan URL Web App yang sah.');
+        return;
+      }
+      localStorage.setItem('SMART_UMMAH_SCRIPT_URL', val);
+      webAppUrl = val;
+      checkScriptUrl();
+      closeConfigModal();
+      fetchCounts();
+    }
 
-        if (diff <= 0) {
-          document.getElementById("cd-days").innerText = "00";
-          document.getElementById("cd-hours").innerText = "00";
-          document.getElementById("cd-mins").innerText = "00";
-          document.getElementById("cd-secs").innerText = "00";
-          return;
-        }
+    // POSTER MODAL FUNCTIONS
+    function openPosterModal() {
+      document.getElementById('posterModal').classList.remove('hidden');
+    }
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+    function closePosterModal() {
+      document.getElementById('posterModal').classList.add('hidden');
+    }
 
-        document.getElementById("cd-days").innerText = String(days).padStart(2, "0");
-        document.getElementById("cd-hours").innerText = String(hours).padStart(2, "0");
-        document.getElementById("cd-mins").innerText = String(mins).padStart(2, "0");
-        document.getElementById("cd-secs").innerText = String(secs).padStart(2, "0");
+    // TOGGLE RULES BOX VISIBILITY
+    function toggleRulesContent() {
+      const rulesBox = document.getElementById('rulesContentBox');
+      const toggleText = document.getElementById('rulesToggleText');
+      const toggleIcon = document.getElementById('rulesToggleIcon');
+
+      isRulesVisible = !isRulesVisible;
+
+      if (isRulesVisible) {
+        rulesBox.classList.remove('hidden');
+        toggleText.textContent = 'Sembunyikan';
+        toggleIcon.className = 'fa-solid fa-chevron-up text-xs';
+      } else {
+        rulesBox.classList.add('hidden');
+        toggleText.textContent = 'Papar Peraturan';
+        toggleIcon.className = 'fa-solid fa-chevron-down text-xs';
+      }
+    }
+
+    // COPY BANK ACCOUNT NUMBER
+    function copyAccNumber() {
+      const accText = "105550000264";
+      
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(accText);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = accText;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
       }
 
-      update();
-      setInterval(update, 1000);
+      const btnText = document.getElementById('copyBtnText');
+      btnText.textContent = "Berjaya Disalin!";
+      setTimeout(() => {
+        btnText.textContent = "Salin No. Akaun";
+      }, 2000);
     }
 
-    /* =========================================================
-       CATEGORY & FORM SWITCHING
-       ========================================================= */
-    function selectCategoryInForm(category) {
-      selectedCategory = category;
-      document.getElementById("inputCategory").value = category;
+    // SWITCH BETWEEN EFOOTBALL & MLBB
+    function switchTab(category) {
+      const efSec = document.getElementById('eFootballSection');
+      const mlSec = document.getElementById('mlbbSection');
+      const categoryInput = document.getElementById('categoryInput');
+      const tabEfBtn = document.getElementById('tabEFootballBtn');
+      const tabMlBtn = document.getElementById('tabMLBBBtn');
+      const feeDisplay = document.getElementById('feeDisplay');
 
-      const btnEF = document.getElementById("btn-cat-ef");
-      const btnML = document.getElementById("btn-cat-ml");
-      const fieldsEF = document.getElementById("fields-eFootball");
-      const fieldsML = document.getElementById("fields-MLBB");
-      const feeDisplay = document.getElementById("feeDisplay");
+      const rulesEf = document.getElementById('rulesEFootball');
+      const rulesMl = document.getElementById('rulesMLBB');
+
+      categoryInput.value = category;
 
       if (category === 'eFootball') {
-        btnEF.className = "py-4 px-4 rounded-xl border-2 border-brand-emerald bg-brand-emerald/10 text-white font-heading font-bold text-sm sm:text-base flex flex-col items-center gap-1 transition shadow-lg";
-        btnML.className = "py-4 px-4 rounded-xl border-2 border-gray-800 bg-brand-dark/50 text-gray-400 font-heading font-bold text-sm sm:text-base flex flex-col items-center gap-1 transition hover:border-brand-gold";
+        efSec.classList.remove('hidden');
+        mlSec.classList.add('hidden');
+
+        rulesEf.classList.remove('hidden');
+        rulesMl.classList.add('hidden');
         
-        fieldsEF.classList.remove("hidden");
-        fieldsML.classList.add("hidden");
-        feeDisplay.innerText = "RM 5.00";
-
-        // Required inputs toggle
-        document.getElementById("ef_nama").required = true;
-        document.getElementById("ef_phone").required = true;
-        document.getElementById("ef_email").required = true;
-        document.getElementById("ef_ign").required = true;
-        document.getElementById("ef_gameid").required = true;
-
-        document.getElementById("ml_team").required = false;
-        document.getElementById("ml_kapten").required = false;
-        document.getElementById("ml_phone").required = false;
-        document.getElementById("ml_email").required = false;
+        tabEfBtn.className = 'flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 bg-emerald-600 text-white shadow-lg';
+        tabMlBtn.className = 'flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 text-gray-400 hover:text-white';
+        
+        feeDisplay.textContent = 'RM 5.00 / Peserta';
       } else {
-        btnML.className = "py-4 px-4 rounded-xl border-2 border-brand-gold bg-brand-gold/10 text-white font-heading font-bold text-sm sm:text-base flex flex-col items-center gap-1 transition shadow-lg";
-        btnEF.className = "py-4 px-4 rounded-xl border-2 border-gray-800 bg-brand-dark/50 text-gray-400 font-heading font-bold text-sm sm:text-base flex flex-col items-center gap-1 transition hover:border-brand-emerald";
+        efSec.classList.add('hidden');
+        mlSec.classList.remove('hidden');
 
-        fieldsML.classList.remove("hidden");
-        fieldsEF.classList.add("hidden");
-        feeDisplay.innerText = "RM 10.00";
+        rulesEf.classList.add('hidden');
+        rulesMl.classList.remove('hidden');
 
-        // Required inputs toggle
-        document.getElementById("ef_nama").required = false;
-        document.getElementById("ef_phone").required = false;
-        document.getElementById("ef_email").required = false;
-        document.getElementById("ef_ign").required = false;
-        document.getElementById("ef_gameid").required = false;
-
-        document.getElementById("ml_team").required = true;
-        document.getElementById("ml_kapten").required = true;
-        document.getElementById("ml_phone").required = true;
-        document.getElementById("ml_email").required = true;
+        tabMlBtn.className = 'flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 bg-purple-600 text-white shadow-lg';
+        tabEfBtn.className = 'flex-1 py-3 px-4 rounded-lg font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 text-gray-400 hover:text-white';
+        
+        feeDisplay.textContent = 'RM 10.00 / Pasukan';
       }
     }
 
-    /* =========================================================
-       FILE UPLOAD PREVIEW
-       ========================================================= */
-    function handleFilePreview(input) {
-      if (input.files && input.files[0]) {
-        const file = input.files[0];
-        
-        // Validation for size (max 5MB)
-        if (file.size > 5 * 1024 * 1024) {
-          alert("Saiz fail melebihi 5MB. Sila muat naik resit yang lebih kecil.");
-          input.value = "";
-          return;
-        }
+    // GENERATE 5 PLAYERS FIELDS FOR MLBB
+    function initMLBBPlayersForm() {
+      const container = document.getElementById('mlbbPlayersContainer');
+      container.innerHTML = '';
 
-        document.getElementById("fileName").innerText = file.name;
-        document.getElementById("filePreviewContainer").classList.remove("hidden");
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          selectedFileBase64 = e.target.result;
+      for (let i = 1; i <= 5; i++) {
+        const isCaptain = i === 1;
+        const playerHtml = `
+          <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800 space-y-3">
+            <div class="flex justify-between items-center border-b border-gray-800 pb-2">
+              <span class="font-bold text-xs uppercase tracking-wider ${isCaptain ? 'text-amber-400' : 'text-gray-300'}">
+                Pemain ${i} ${isCaptain ? '(Kapten Pasukan)' : ''}
+              </span>
+              <span class="text-[10px] bg-gray-800 text-gray-400 px-2 py-0.5 rounded">Wajib</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <label class="block text-gray-400 mb-1">Nama Penuh</label>
+                <input type="text" id="ml_player_${i}_name" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="Nama Penuh Pemain ${i}">
+              </div>
+              <div>
+                <label class="block text-gray-400 mb-1">No. Kad Pengenalan</label>
+                <input type="text" id="ml_player_${i}_nokp" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="No. KP Pemain ${i}">
+              </div>
+              <div>
+                <label class="block text-gray-400 mb-1">No. Telefon</label>
+                <input type="tel" id="ml_player_${i}_phone" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="No. Tel Pemain ${i}">
+              </div>
+              <div>
+                <label class="block text-gray-400 mb-1">Nama Dalam Game (IGN)</label>
+                <input type="text" id="ml_player_${i}_ign" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="IGN Pemain ${i}">
+              </div>
+              <div>
+                <label class="block text-gray-400 mb-1">Game ID & Server ID</label>
+                <input type="text" id="ml_player_${i}_gameId" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="Contoh: 12345678 (1234)">
+              </div>
+              <div>
+                <label class="block text-gray-400 mb-1">Alamat Kediaman</label>
+                <input type="text" id="ml_player_${i}_address" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="Alamat Singkat">
+              </div>
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', playerHtml);
+      }
+    }
+
+    // FETCH COUNTS FROM BACKEND
+    async function fetchCounts() {
+      if (!webAppUrl) return;
+
+      try {
+        const response = await fetch(`${webAppUrl}?action=counts`);
+        const data = await response.json();
+
+        if (data.success) {
+          document.getElementById('efootballCount').textContent = data.eFootball ?? 0;
+          document.getElementById('mlbbCount').textContent = data.mlbb ?? 0;
+        }
+      } catch (err) {
+        console.error('Ralat mendapatkan bilangan pendaftaran:', err);
+      }
+    }
+
+    // FILE UPLOAD AND BASE64 COMPRESSION
+    function handleFileSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      if (file.size > 3 * 1024 * 1024) {
+        alert('Saiz fail melebihi 3MB. Sila muat naik fail yang lebih kecil.');
+        clearFile();
+        return;
+      }
+
+      document.getElementById('fileName').textContent = file.name;
+      document.getElementById('fileSize').textContent = (file.size / 1024).toFixed(1) + ' KB';
+
+      document.getElementById('uploadPlaceholder').classList.add('hidden');
+      document.getElementById('uploadPreview').classList.remove('hidden');
+
+      const reader = new FileReader();
+
+      // Compress image if image file
+      if (file.type.startsWith('image/')) {
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            let width = img.width;
+            let height = img.height;
+            const maxDim = 1200;
+
+            if (width > maxDim || height > maxDim) {
+              if (width > height) {
+                height = Math.round((height * maxDim) / width);
+                width = maxDim;
+              } else {
+                width = Math.round((width * maxDim) / height);
+                height = maxDim;
+              }
+            }
+
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+
+            base64Proof = canvas.toDataURL('image/jpeg', 0.75);
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        // PDF Direct base64
+        reader.onload = (e) => {
+          base64Proof = e.target.result;
         };
         reader.readAsDataURL(file);
       }
     }
 
-    function resetFileUpload() {
-      document.getElementById("proofUpload").value = "";
-      document.getElementById("filePreviewContainer").classList.add("hidden");
-      selectedFileBase64 = null;
+    function clearFile() {
+      document.getElementById('proofInput').value = '';
+      base64Proof = '';
+      document.getElementById('uploadPlaceholder').classList.remove('hidden');
+      document.getElementById('uploadPreview').classList.add('hidden');
     }
 
-    /* =========================================================
-       FORMAT TAB SWITCHING
-       ========================================================= */
-    function switchFormatTab(tab) {
-      const tabEF = document.getElementById("tab-efootball");
-      const tabML = document.getElementById("tab-mlbb");
-      const btnEF = document.getElementById("tab-ef-btn");
-      const btnML = document.getElementById("tab-ml-btn");
-
-      if (tab === 'efootball') {
-        tabEF.classList.remove("hidden");
-        tabML.classList.add("hidden");
-        btnEF.className = "py-3 px-6 font-heading font-bold text-sm border-b-2 border-brand-emerald text-brand-emerald transition flex items-center gap-2";
-        btnML.className = "py-3 px-6 font-heading font-bold text-sm border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2";
-      } else {
-        tabML.classList.remove("hidden");
-        tabEF.classList.add("hidden");
-        btnML.className = "py-3 px-6 font-heading font-bold text-sm border-b-2 border-brand-gold text-brand-gold transition flex items-center gap-2";
-        btnEF.className = "py-3 px-6 font-heading font-bold text-sm border-b-2 border-transparent text-gray-400 hover:text-white transition flex items-center gap-2";
-      }
-    }
-
-    /* =========================================================
-       SUBMIT REGISTRATION FORM
-       ========================================================= */
-    function handleRegistrationSubmit(event) {
+    // SUBMIT FORM TO GAS BACKEND
+    async function handleFormSubmit(event) {
       event.preventDefault();
 
-      const list = getStoredRegistrations();
-      const randomDigits = Math.floor(1000 + Math.random() * 9000);
-      let regRecord = {};
-
-      if (selectedCategory === "eFootball") {
-        const phone = document.getElementById("ef_phone").value.trim();
-        const gameId = document.getElementById("ef_gameid").value.trim();
-
-        // Check duplicates
-        const duplicate = list.find(item => item.phone === phone || item.gameId === gameId);
-        if (duplicate) {
-          alert("Peringatan: Nombor telefon atau Game ID ini telah didaftarkan sebelum ini.");
-          return;
-        }
-
-        regRecord = {
-          id: `EST2026-EF-${randomDigits}`,
-          category: "eFootball",
-          name: document.getElementById("ef_nama").value.trim(),
-          phone: phone,
-          email: document.getElementById("ef_email").value.trim(),
-          ign: document.getElementById("ef_ign").value.trim(),
-          gameId: gameId,
-          fee: 5,
-          status: "PENDING",
-          date: new Date().toISOString().split('T')[0],
-          proof: selectedFileBase64
-        };
-      } else {
-        const team = document.getElementById("ml_team").value.trim();
-        const captain = document.getElementById("ml_kapten").value.trim();
-        const phone = document.getElementById("ml_phone").value.trim();
-
-        // Check duplicate team/phone
-        const duplicate = list.find(item => item.phone === phone || (item.name && item.name.toLowerCase() === team.toLowerCase()));
-        if (duplicate) {
-          alert("Peringatan: Nama pasukan atau nombor telefon ini telah didaftarkan.");
-          return;
-        }
-
-        const p1 = document.getElementById("ml_p1_nama").value || captain;
-        const p1_id = document.getElementById("ml_p1_id").value || "-";
-        const p2 = document.getElementById("ml_p2_nama").value || "Pemain 2";
-        const p2_id = document.getElementById("ml_p2_id").value || "-";
-        const p3 = document.getElementById("ml_p3_nama").value || "Pemain 3";
-        const p3_id = document.getElementById("ml_p3_id").value || "-";
-        const p4 = document.getElementById("ml_p4_nama").value || "Pemain 4";
-        const p4_id = document.getElementById("ml_p4_id").value || "-";
-        const p5 = document.getElementById("ml_p5_nama").value || "Pemain 5";
-        const p5_id = document.getElementById("ml_p5_id").value || "-";
-
-        regRecord = {
-          id: `EST2026-ML-${randomDigits}`,
-          category: "Mobile Legends",
-          name: team,
-          captain: captain,
-          phone: phone,
-          email: document.getElementById("ml_email").value.trim(),
-          players: `1. ${p1} (${p1_id})\n2. ${p2} (${p2_id})\n3. ${p3} (${p3_id})\n4. ${p4} (${p4_id})\n5. ${p5} (${p5_id})`,
-          fee: 10,
-          status: "PENDING",
-          date: new Date().toISOString().split('T')[0],
-          proof: selectedFileBase64
-        };
+      if (!webAppUrl) {
+        alert('Sila tetapkan Google Web App URL terlebih dahulu melalui butang "Tetapan API" di bahagian atas.');
+        openConfigModal();
+        return;
       }
 
-      // Save record
-      list.push(regRecord);
-      saveRegistrations(list);
+      if (!base64Proof) {
+        alert('Sila muat naik resit pembayaran terlebih dahulu.');
+        return;
+      }
 
-      // Populate Success Slip Modal
-      document.getElementById("slipRegNo").innerText = regRecord.id;
-      document.getElementById("slipCategory").innerText = regRecord.category;
-      document.getElementById("slipName").innerText = regRecord.name;
-      document.getElementById("slipFee").innerText = `RM ${regRecord.fee}.00`;
-      
-      // WhatsApp Link Formatting
-      const waMsg = encodeURIComponent(
-        `Salam Admin, Saya telah mendaftar Esport Tour Smart Ummah 2026.\n\n` +
-        `*No. Pendaftaran:* ${regRecord.id}\n` +
-        `*Kategori:* ${regRecord.category}\n` +
-        `*Nama/Team:* ${regRecord.name}\n` +
-        `*No Tel:* ${regRecord.phone}\n\n` +
-        `Sila sahkan penyertaan dan resit pembayaran saya. Terima kasih!`
-      );
-      document.getElementById("btnWhatsappSlip").href = `https://wa.me/60123456789?text=${waMsg}`;
+      const category = document.getElementById('categoryInput').value;
+      let payloadData = { category: category, proof: base64Proof };
 
-      // Show Modal & Reset Form
-      document.getElementById("successModal").classList.remove("hidden");
-      document.getElementById("regForm").reset();
-      resetFileUpload();
-      selectCategoryInForm('eFootball');
+      if (category === 'eFootball') {
+        payloadData.name = document.getElementById('ef_name').value.trim();
+        payloadData.nokp = document.getElementById('ef_nokp').value.trim();
+        payloadData.phone = document.getElementById('ef_phone').value.trim();
+        payloadData.gameName = document.getElementById('ef_gameName').value.trim();
+        payloadData.gameId = document.getElementById('ef_gameId').value.trim();
+        payloadData.address = document.getElementById('ef_address').value.trim();
+
+        if (!payloadData.name || !payloadData.nokp || !payloadData.phone || !payloadData.gameName || !payloadData.gameId || !payloadData.address) {
+          alert('Sila lengkapkan semua maklumat peserta eFootball.');
+          return;
+        }
+      } else {
+        // MLBB
+        payloadData.team = document.getElementById('ml_team').value.trim();
+        payloadData.captain = document.getElementById('ml_captain').value.trim();
+
+        if (!payloadData.team || !payloadData.captain) {
+          alert('Sila isi Nama Pasukan dan Kapten.');
+          return;
+        }
+
+        const players = [];
+        for (let i = 1; i <= 5; i++) {
+          const pName = document.getElementById(`ml_player_${i}_name`).value.trim();
+          const pNokp = document.getElementById(`ml_player_${i}_nokp`).value.trim();
+          const pPhone = document.getElementById(`ml_player_${i}_phone`).value.trim();
+          const pIgn = document.getElementById(`ml_player_${i}_ign`).value.trim();
+          const pGameId = document.getElementById(`ml_player_${i}_gameId`).value.trim();
+          const pAddress = document.getElementById(`ml_player_${i}_address`).value.trim();
+
+          if (!pName || !pNokp || !pPhone || !pIgn || !pGameId || !pAddress) {
+            alert(`Sila lengkapkan maklumat lengkap untuk Pemain ${i}.`);
+            return;
+          }
+
+          players.push({
+            name: pName,
+            nokp: pNokp,
+            phone: pPhone,
+            gameName: pIgn,
+            gameId: pGameId,
+            address: pAddress
+          });
+        }
+
+        payloadData.players = players;
+      }
+
+      // LOADING STATE
+      const submitBtn = document.getElementById('submitBtn');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Menghantar Pendaftaran...';
+
+      try {
+        const response = await fetch(webAppUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ payload: JSON.stringify(payloadData) })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          document.getElementById('resId').textContent = result.registrationId || 'BERJAYA';
+          document.getElementById('successModal').classList.remove('hidden');
+          
+          // Reset form
+          document.getElementById('registrationForm').reset();
+          clearFile();
+          fetchCounts();
+        } else {
+          alert('Pendaftaran Gagal: ' + (result.message || 'Sila cuba lagi.'));
+        }
+      } catch (err) {
+        alert('Ralat semasa menghantar borang: ' + err.message);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
     }
 
     function closeSuccessModal() {
-      document.getElementById("successModal").classList.add("hidden");
+      document.getElementById('successModal').classList.add('hidden');
     }
-
-    /* =========================================================
-       ADMIN DASHBOARD LOGIC
-       ========================================================= */
-    function toggleAdminModal() {
-      const modal = document.getElementById("adminModal");
-      modal.classList.toggle("hidden");
-    }
-
-    function verifyAdminPin() {
-      const pin = document.getElementById("adminPin").value;
-      if (pin === ADMIN_PIN) {
-        document.getElementById("adminAuthScreen").classList.add("hidden");
-        document.getElementById("adminDashboardContent").classList.remove("hidden");
-        renderAdminTable();
-      } else {
-        alert("PIN Admin Tidak Sah. Sila cuba lagi.");
-      }
-    }
-
-    function logoutAdmin() {
-      document.getElementById("adminPin").value = "";
-      document.getElementById("adminAuthScreen").classList.remove("hidden");
-      document.getElementById("adminDashboardContent").classList.add("hidden");
-      toggleAdminModal();
-    }
-
-    function renderAdminTable() {
-      const list = getStoredRegistrations();
-      const search = document.getElementById("adminSearchInput").value.toLowerCase();
-      const catFilter = document.getElementById("adminCategoryFilter").value;
-      const statusFilter = document.getElementById("adminStatusFilter").value;
-
-      // Statistics
-      const totalCount = list.length;
-      const efCount = list.filter(i => i.category === 'eFootball').length;
-      const mlCount = list.filter(i => i.category === 'Mobile Legends').length;
-      const totalFees = list.reduce((sum, item) => sum + (item.status === 'VERIFIED' ? item.fee : 0), 0);
-
-      document.getElementById("statTotalCount").innerText = totalCount;
-      document.getElementById("statEFCount").innerText = efCount;
-      document.getElementById("statMLCount").innerText = mlCount;
-      document.getElementById("statTotalFees").innerText = `RM ${totalFees}.00`;
-
-      // Filter Data
-      const filtered = list.filter(item => {
-        const matchesSearch = item.name.toLowerCase().includes(search) || 
-                              item.phone.includes(search) || 
-                              item.id.toLowerCase().includes(search);
-        const matchesCat = catFilter === "ALL" || item.category === catFilter;
-        const matchesStatus = statusFilter === "ALL" || item.status === statusFilter;
-        return matchesSearch && matchesCat && matchesStatus;
-      });
-
-      const tbody = document.getElementById("adminTableBody");
-      tbody.innerHTML = "";
-
-      if (filtered.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="p-6 text-center text-gray-500">Tiada rekod pendaftaran ditemui.</td></tr>`;
-        return;
-      }
-
-      filtered.forEach((item) => {
-        const tr = document.createElement("tr");
-        tr.className = "hover:bg-brand-dark/50 transition border-b border-gray-800";
-
-        let badgeColor = "bg-amber-500/20 text-amber-400 border-amber-500/30";
-        if (item.status === "VERIFIED") badgeColor = "bg-green-500/20 text-green-400 border-green-500/30";
-        if (item.status === "REJECTED") badgeColor = "bg-red-500/20 text-red-400 border-red-500/30";
-
-        tr.innerHTML = `
-          <td class="p-3 font-mono font-bold text-gray-200">${item.id}</td>
-          <td class="p-3 font-semibold ${item.category === 'eFootball' ? 'text-brand-emerald' : 'text-brand-gold'}">${item.category}</td>
-          <td class="p-3 font-medium text-white">${item.name} ${item.captain ? `<br><span class="text-[10px] text-gray-400">Kapten: ${item.captain}</span>` : ''}</td>
-          <td class="p-3 text-gray-300">${item.phone}</td>
-          <td class="p-3 font-bold text-brand-gold">RM ${item.fee}.00</td>
-          <td class="p-3">
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold border ${badgeColor}">
-              ${item.status}
-            </span>
-          </td>
-          <td class="p-3 text-center space-x-1">
-            <button onclick="updateStatus('${item.id}', 'VERIFIED')" class="px-2 py-1 bg-green-600 hover:bg-green-500 text-white rounded text-[10px] font-bold" title="Sahkan">
-              <i class="fa-solid fa-check"></i>
-            </button>
-            <button onclick="updateStatus('${item.id}', 'REJECTED')" class="px-2 py-1 bg-red-600 hover:bg-red-500 text-white rounded text-[10px] font-bold" title="Tolak">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-            <button onclick="deleteRecord('${item.id}')" class="px-2 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded text-[10px] font-bold" title="Padam">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
-
-    function updateStatus(id, newStatus) {
-      let list = getStoredRegistrations();
-      const index = list.findIndex(i => i.id === id);
-      if (index !== -1) {
-        list[index].status = newStatus;
-        saveRegistrations(list);
-        renderAdminTable();
-      }
-    }
-
-    function deleteRecord(id) {
-      if (window.confirm("Adakah anda pasti mahu memadam rekod pendaftaran ini?")) {
-        let list = getStoredRegistrations();
-        list = list.filter(i => i.id !== id);
-        saveRegistrations(list);
-        renderAdminTable();
-      }
-    }
-
-    function exportDataCSV() {
-      const list = getStoredRegistrations();
-      if (list.length === 0) {
-        alert("Tiada data untuk dieksport.");
-        return;
-      }
-
-      let csvContent = "data:text/csv;charset=utf-8,ID,Kategori,Nama/Pasukan,Telefon,Email,Status,Yuran(RM),Tarikh\n";
-      list.forEach(r => {
-        csvContent += `"${r.id}","${r.category}","${r.name}","${r.phone}","${r.email}","${r.status}","${r.fee}","${r.date}"\n`;
-      });
-
-      const encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", `Pendaftaran_Esport_Smart_Ummah_2026.csv`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
-    /* =========================================================
-       MOBILE MENU TOGGLE
-       ========================================================= */
-    function toggleMobileMenu() {
-      const menu = document.getElementById("mobileMenu");
-      menu.classList.toggle("hidden");
-    }
-
-    /* =========================================================
-       PAGE INITIALIZATION
-       ========================================================= */
-    window.onload = function() {
-      initCountdown();
-      getStoredRegistrations();
-    };
   </script>
-
 </body>
 </html>
