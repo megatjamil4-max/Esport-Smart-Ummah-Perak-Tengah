@@ -77,20 +77,15 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-black">
 
-  <!-- TOP NOTICE BAR / SCRIPT URL SETTING -->
+  <!-- TOP NOTICE BAR -->
   <div class="bg-gray-900 border-b border-gray-800 py-2.5 px-4 text-xs text-gray-400 sticky top-0 z-40 backdrop-blur-md bg-opacity-90">
     <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
       <div class="flex items-center gap-2">
         <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
         <span class="font-semibold text-gray-200">Pendaftaran Rasmi Kini Terbuka</span>
       </div>
-      <div class="flex items-center gap-4">
-        <span id="scriptUrlStatus" class="text-amber-400 flex items-center gap-1.5 font-medium">
-          <i class="fa-solid fa-triangle-exclamation"></i> URL Web App Belum Diset
-        </span>
-        <button onclick="openConfigModal()" class="text-emerald-400 hover:text-emerald-300 underline font-bold flex items-center gap-1.5 transition-colors">
-          <i class="fa-solid fa-gear"></i> Tetapan API
-        </button>
+      <div class="flex items-center gap-2 text-emerald-400 text-xs font-medium">
+        <i class="fa-solid fa-circle-check"></i> Sistem Dalam Talian
       </div>
     </div>
   </div>
@@ -562,32 +557,32 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Nama Penuh <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_name" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: Ahmad Bin Ali">
+              <input type="text" id="ef_name" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: Ahmad Bin Ali" required>
             </div>
 
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Kad Pengenalan <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_nokp" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 020512085432">
+              <input type="text" id="ef_nokp" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 020512085432" required>
             </div>
 
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Telefon (WhatsApp) <span class="text-red-500">*</span></label>
-              <input type="tel" id="ef_phone" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 0123456789">
+              <input type="tel" id="ef_phone" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 0123456789" required>
             </div>
 
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Nama Dalam Game (IGN) <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_gameName" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: KingPes99">
+              <input type="text" id="ef_gameName" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: KingPes99" required>
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Game ID (User ID eFootball) <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_gameId" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 123-456-789">
+              <input type="text" id="ef_gameId" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 123-456-789" required>
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Alamat Kediaman <span class="text-red-500">*</span></label>
-              <textarea id="ef_address" rows="2" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Alamat penuh di Perak Tengah / Seri Iskandar"></textarea>
+              <textarea id="ef_address" rows="2" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Alamat penuh di Perak Tengah / Seri Iskandar" required></textarea>
             </div>
           </div>
         </div>
@@ -813,49 +808,6 @@
     </div>
   </div>
 
-  <!-- MODAL: API SCRIPT URL CONFIG -->
-  <div id="configModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
-    <div class="glass-card max-w-lg w-full p-6 rounded-2xl border border-gray-700 text-left">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <i class="fa-solid fa-plug text-emerald-400"></i> Tetapan Web App URL
-        </h3>
-        <button onclick="closeConfigModal()" class="text-gray-400 hover:text-white">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <p class="text-xs text-gray-400 mb-4">
-        Masukkan URL Google Apps Script yang telah di-deploy sebagai <b>Web App</b> (Execute as: <i>Me</i>, Who has access: <i>Anyone</i>).
-      </p>
-
-      <div class="space-y-4">
-        <div>
-          <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Google Web App URL</label>
-          <input type="url" id="scriptUrlInput" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-xs font-mono text-emerald-300 focus:outline-none focus:border-emerald-500" placeholder="https://script.google.com/macros/s/.../exec">
-        </div>
-
-        <div class="bg-gray-900 p-3 rounded-lg border border-gray-800 text-[11px] text-gray-400 space-y-1">
-          <div class="font-bold text-gray-300 mb-1">Panduan Pelaksanaan Script:</div>
-          <div>1. Di Apps Script, tekan <b>Deploy</b> > <b>New Deployment</b>.</div>
-          <div>2. Pilih Type: <b>Web App</b>.</div>
-          <div>3. Execute as: <b>Me</b>.</div>
-          <div>4. Who has access: <b>Anyone</b>.</div>
-          <div>5. Salin Web App URL dan tampal di atas.</div>
-        </div>
-
-        <div class="flex gap-2">
-          <button onclick="saveScriptUrl()" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs">
-            Simpan & Muat Semula
-          </button>
-          <button onclick="closeConfigModal()" class="py-2.5 px-4 bg-gray-800 hover:bg-gray-700 text-gray-300 font-bold rounded-lg text-xs">
-            Batal
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="border-t border-gray-800 py-6 text-center text-xs text-gray-500 bg-gray-950">
     <div class="max-w-6xl mx-auto px-4">
@@ -867,53 +819,16 @@
   <!-- JAVASCRIPT LOGIC -->
   <script>
     // CONFIG & STATE
-    let webAppUrl = localStorage.getItem('SMART_UMMAH_SCRIPT_URL') || '';
+    const DEFAULT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz4XsHaygEGZJsIYEq04dXJoIQ8hHWUBAZiDhtfU4KTY0H5541BIZ7gsuHf7RWNxS3H/exec';
+    const webAppUrl = DEFAULT_WEB_APP_URL;
     let base64Proof = '';
     let isRulesVisible = true;
 
     // INIT
     document.addEventListener('DOMContentLoaded', () => {
       initMLBBPlayersForm();
-      checkScriptUrl();
-      if (webAppUrl) {
-        fetchCounts();
-      }
-    });
-
-    function checkScriptUrl() {
-      const statusEl = document.getElementById('scriptUrlStatus');
-      const urlInput = document.getElementById('scriptUrlInput');
-      urlInput.value = webAppUrl;
-
-      if (webAppUrl) {
-        statusEl.className = 'text-emerald-400 flex items-center gap-1.5 font-medium';
-        statusEl.innerHTML = '<i class="fa-solid fa-circle-check"></i> Web App Disambung';
-      } else {
-        statusEl.className = 'text-amber-400 flex items-center gap-1.5 font-medium';
-        statusEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> URL Web App Belum Diset';
-      }
-    }
-
-    function openConfigModal() {
-      document.getElementById('configModal').classList.remove('hidden');
-    }
-
-    function closeConfigModal() {
-      document.getElementById('configModal').classList.add('hidden');
-    }
-
-    function saveScriptUrl() {
-      const val = document.getElementById('scriptUrlInput').value.trim();
-      if (!val) {
-        alert('Sila masukkan URL Web App yang sah.');
-        return;
-      }
-      localStorage.setItem('SMART_UMMAH_SCRIPT_URL', val);
-      webAppUrl = val;
-      checkScriptUrl();
-      closeConfigModal();
       fetchCounts();
-    }
+    });
 
     // POSTER MODAL FUNCTIONS
     function openPosterModal() {
@@ -1137,12 +1052,6 @@
     // SUBMIT FORM TO GAS BACKEND
     async function handleFormSubmit(event) {
       event.preventDefault();
-
-      if (!webAppUrl) {
-        alert('Sila tetapkan Google Web App URL terlebih dahulu melalui butang "Tetapan API" di bahagian atas.');
-        openConfigModal();
-        return;
-      }
 
       if (!base64Proof) {
         alert('Sila muat naik resit pembayaran terlebih dahulu.');
