@@ -595,33 +595,33 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Nama Penuh <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_name" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: Ahmad Bin Ali" required>
+              <input type="text" id="ef_name" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: Ahmad Bin Ali">
             </div>
 
             <div>
-              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Kad Pengenalan (Umur 15 - 30 Tiga Tahun) <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_nokp" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 020512085432" required>
+              <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Kad Pengenalan (Umur 15 - 30 Tahun) <span class="text-red-500">*</span></label>
+              <input type="text" id="ef_nokp" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 020512085432">
               <span class="text-[10px] text-gray-400 mt-0.5 block">*Lahir antara tahun 1996 - 2011</span>
             </div>
 
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">No. Telefon (WhatsApp) <span class="text-red-500">*</span></label>
-              <input type="tel" id="ef_phone" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 0123456789" required>
+              <input type="tel" id="ef_phone" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 0123456789">
             </div>
 
             <div>
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Nama Dalam Game (IGN) <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_gameName" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: KingPes99" required>
+              <input type="text" id="ef_gameName" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: KingPes99">
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Game ID (User ID eFootball) <span class="text-red-500">*</span></label>
-              <input type="text" id="ef_gameId" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 123-456-789" required>
+              <input type="text" id="ef_gameId" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Contoh: 123-456-789">
             </div>
 
             <div class="md:col-span-2">
               <label class="block text-xs font-semibold uppercase text-gray-300 mb-1">Alamat Kediaman <span class="text-red-500">*</span></label>
-              <textarea id="ef_address" rows="2" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Alamat penuh di Perak Tengah / Seri Iskandar / Perak" required></textarea>
+              <textarea id="ef_address" rows="2" class="w-full bg-gray-900/90 border border-gray-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-emerald-500 text-white" placeholder="Alamat penuh di Perak Tengah / Seri Iskandar / Perak"></textarea>
             </div>
           </div>
         </div>
@@ -707,7 +707,7 @@
               Muat Naik Resit Pembayaran (Imej / PDF) <span class="text-red-500">*</span>
             </label>
             <div class="relative border-2 border-dashed border-gray-700 hover:border-emerald-500 rounded-xl p-5 text-center bg-gray-900/50 transition-all cursor-pointer" id="dropzone">
-              <input type="file" id="proofInput" accept="image/*,application/pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="handleFileSelect(event)" required>
+              <input type="file" id="proofInput" accept="image/*,application/pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="handleFileSelect(event)">
               
               <div id="uploadPlaceholder" class="space-y-2">
                 <i class="fa-solid fa-cloud-arrow-up text-3xl text-emerald-400"></i>
@@ -988,27 +988,27 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
               <div>
-                <label class="block text-gray-400 mb-1">Nama Penuh</label>
+                <label class="block text-gray-400 mb-1">Nama Penuh <span class="text-red-500">*</span></label>
                 <input type="text" id="ml_player_${i}_name" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="Nama Penuh Pemain ${i}">
               </div>
               <div>
-                <label class="block text-gray-400 mb-1">No. Kad Pengenalan (15-30 Tahun)</label>
+                <label class="block text-gray-400 mb-1">No. Kad Pengenalan (15-30 Tahun) <span class="text-red-500">*</span></label>
                 <input type="text" id="ml_player_${i}_nokp" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="No. KP Pemain ${i}">
               </div>
               <div>
-                <label class="block text-gray-400 mb-1">No. Telefon</label>
+                <label class="block text-gray-400 mb-1">No. Telefon <span class="text-red-500">*</span></label>
                 <input type="tel" id="ml_player_${i}_phone" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="No. Tel Pemain ${i}">
               </div>
               <div>
-                <label class="block text-gray-400 mb-1">Nama Dalam Game (IGN)</label>
+                <label class="block text-gray-400 mb-1">Nama Dalam Game (IGN) <span class="text-red-500">*</span></label>
                 <input type="text" id="ml_player_${i}_ign" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="IGN Pemain ${i}">
               </div>
               <div>
-                <label class="block text-gray-400 mb-1">Game ID & Server ID</label>
+                <label class="block text-gray-400 mb-1">Game ID & Server ID <span class="text-red-500">*</span></label>
                 <input type="text" id="ml_player_${i}_gameId" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="Contoh: 12345678 (1234)">
               </div>
               <div>
-                <label class="block text-gray-400 mb-1">Alamat Kediaman</label>
+                <label class="block text-gray-400 mb-1">Alamat Kediaman <span class="text-red-500">*</span></label>
                 <input type="text" id="ml_player_${i}_address" class="w-full bg-gray-950 border border-gray-700 rounded px-3 py-2 text-white focus:border-purple-500" placeholder="Alamat Singkat">
               </div>
             </div>
@@ -1041,7 +1041,7 @@
       if (!file) return;
 
       if (file.size > 3 * 1024 * 1024) {
-        alert('Saiz fail melebihi 3MB. Sila muat naik fail yang lebih kecil.');
+        alert('Saiz fail melebihi 3MB. Sila muat naik fail resit yang lebih kecil.');
         clearFile();
         return;
       }
@@ -1054,7 +1054,6 @@
 
       const reader = new FileReader();
 
-      // Compress image if image file
       if (file.type.startsWith('image/')) {
         reader.onload = (e) => {
           const img = new Image();
@@ -1085,7 +1084,6 @@
         };
         reader.readAsDataURL(file);
       } else {
-        // PDF Direct base64
         reader.onload = (e) => {
           base64Proof = e.target.result;
         };
@@ -1104,14 +1102,10 @@
     async function handleFormSubmit(event) {
       event.preventDefault();
 
-      if (!base64Proof) {
-        alert('Sila muat naik resit pembayaran terlebih dahulu.');
-        return;
-      }
-
       const category = document.getElementById('categoryInput').value;
-      let payloadData = { category: category, proof: base64Proof };
+      let payloadData = { category: category };
 
+      // DYNAMIC JS VALIDATION (PREVENTS SILENT HTML5 VALIDATION ISSUES)
       if (category === 'eFootball') {
         payloadData.name = document.getElementById('ef_name').value.trim();
         payloadData.nokp = document.getElementById('ef_nokp').value.trim();
@@ -1120,19 +1114,20 @@
         payloadData.gameId = document.getElementById('ef_gameId').value.trim();
         payloadData.address = document.getElementById('ef_address').value.trim();
 
-        if (!payloadData.name || !payloadData.nokp || !payloadData.phone || !payloadData.gameName || !payloadData.gameId || !payloadData.address) {
-          alert('Sila lengkapkan semua maklumat peserta eFootball.');
-          return;
-        }
+        if (!payloadData.name) { alert('Sila isi Nama Penuh anda.'); return; }
+        if (!payloadData.nokp) { alert('Sila isi No. Kad Pengenalan anda.'); return; }
+        if (!payloadData.phone) { alert('Sila isi No. Telefon WhatsApp.'); return; }
+        if (!payloadData.gameName) { alert('Sila isi Nama Dalam Game (IGN).'); return; }
+        if (!payloadData.gameId) { alert('Sila isi Game ID (User ID eFootball).'); return; }
+        if (!payloadData.address) { alert('Sila isi Alamat Kediaman anda.'); return; }
+
       } else {
         // MLBB
         payloadData.team = document.getElementById('ml_team').value.trim();
         payloadData.captain = document.getElementById('ml_captain').value.trim();
 
-        if (!payloadData.team || !payloadData.captain) {
-          alert('Sila isi Nama Pasukan dan Kapten.');
-          return;
-        }
+        if (!payloadData.team) { alert('Sila isi Nama Pasukan MLBB.'); return; }
+        if (!payloadData.captain) { alert('Sila isi Nama Kapten Pasukan MLBB.'); return; }
 
         const players = [];
         for (let i = 1; i <= 5; i++) {
@@ -1144,7 +1139,7 @@
           const pAddress = document.getElementById(`ml_player_${i}_address`).value.trim();
 
           if (!pName || !pNokp || !pPhone || !pIgn || !pGameId || !pAddress) {
-            alert(`Sila lengkapkan maklumat lengkap untuk Pemain ${i}.`);
+            alert(`Sila lengkapkan semua maklumat untuk Pemain ${i}.`);
             return;
           }
 
@@ -1160,6 +1155,14 @@
 
         payloadData.players = players;
       }
+
+      // VALIDATE RESIT FILE
+      if (!base64Proof) {
+        alert('Sila muat naik resit pembayaran terlebih dahulu.');
+        return;
+      }
+
+      payloadData.proof = base64Proof;
 
       // LOADING STATE
       const submitBtn = document.getElementById('submitBtn');
@@ -1188,7 +1191,7 @@
           alert('Pendaftaran Gagal: ' + (result.message || 'Sila cuba lagi.'));
         }
       } catch (err) {
-        alert('Ralat semasa menghantar borang: ' + err.message);
+        alert('Ralat semasa menghantar borang: ' + err.message + '\n\nSila pastikan sambungan internet anda stabil dan pautan Web App Google Apps Script telah disetkan kepada "Anyone".');
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
@@ -1196,7 +1199,6 @@
     }
 
     function closeSuccessModal() {
-      document.getElementById('successModal').classList.hidden = true;
       document.getElementById('successModal').classList.add('hidden');
       document.getElementById('registrationForm').reset();
       clearFile();
